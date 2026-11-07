@@ -310,11 +310,23 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--verde);b
     new FormData(form).forEach(function(v,k){dados[k]=v});
     dados['Serviço']=p.nome+(p.preco?' · '+p.preco:'');
     var b=$('enviar'); b.disabled=true; b.firstChild.textContent='A enviar… ';
+    /* Plano B: se o envio rápido falhar (formulário por ativar, rede, bloqueio), envia pelo método
+       normal do FormSubmit, que abre a página dele e volta a este site já com "Pedido enviado". */
+    var normal=function(){
+      var h=document.createElement('input');h.type='hidden';h.name='Serviço';h.value=dados['Serviço'];
+      sel.removeAttribute('name');form.appendChild(h);
+      HTMLFormElement.prototype.submit.call(form);
+    };
     fetch('https://formsubmit.co/ajax/ola@marketolder.pt',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(dados)})
       .then(function(r){return r.json()})
-      .then(function(j){if(j && (j.success===true||j.success==='true'))concluido($('nome').value.trim().split(' ')[0]);else throw 0})
-      .catch(function(){$('aviso').hidden=false;$('aviso').focus&&$('aviso').scrollIntoView({block:'center'})})
-      .then(function(){b.disabled=false;b.firstChild.textContent='Enviar pedido '});
+      .then(function(j){
+        if(j && (j.success===true||j.success==='true')){concluido($('nome').value.trim().split(' ')[0]);b.disabled=false;b.firstChild.textContent='Enviar pedido ';return}
+        if(window.console)console.warn('FormSubmit:',j&&j.message);
+        normal();
+      })
+      .catch(function(){
+        try{normal()}catch(e){$('aviso').hidden=false;$('aviso').scrollIntoView({block:'center'});b.disabled=false;b.firstChild.textContent='Enviar pedido '}
+      });
   });
 })();
 </script>
