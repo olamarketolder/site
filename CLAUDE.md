@@ -47,7 +47,7 @@ Donos de pequenos negócios locais (cafés, restaurantes, cabeleireiros, oficina
 O fundador é licenciado em Marketing, recebeu **prémios de mérito como melhor aluno do curso** e tem **mais de 200 horas de formação em marketing digital**. Usar numa secção "Sobre" curta, sem nome nem fotografia. (Indicação do dono: não falar em "duas bolsas de excelência".)
 
 ## Preços (definidos pelo dono, usar exatamente estes)
-**Arranque, pagamento único, 100 €:** ficha Google criada e otimizada, criação de redes sociais (Instagram, Facebook e TikTok), logótipo simples, guia de identidade visual, primeira publicação.
+**Arranque, pagamento único, 100 €:** ficha Google criada e otimizada, criação de redes sociais (Instagram, Facebook e TikTok), logótipo, animação do logótipo, guia de identidade visual, primeira publicação.
 
 **Mensalidades**
 - **Presença, 75 €/mês:** 1 publicação por semana, design com a marca do cliente, agendamento nas redes.
