@@ -13,6 +13,7 @@ Este repositório é o site da **Marketolder**, uma marca de serviços de market
 - **Nome:** Marketolder (escreve-se assim, sem H). No logótipo, em maiúsculas espaçadas: MARKETOLDER.
 - **Assinatura:** "Marketing para pequenos negócios"
 - **Promessa:** "Pomos o seu negócio onde os clientes o procuram."
+- **Posicionamento (indicação do dono):** **autenticidade**. Não somos "virais" nem caçadores de tendências: cada marca é única, tem o seu ADN, e o nosso trabalho é trabalhar a sua identidade e promover a sua autenticidade, porque é isso que liga as pessoas às marcas.
 - **Personalidade:** sóbria, competente, próxima, sólida. Estilo **Old Money**: elegância discreta, nada de espalhafato, nada de "growth hacking", nada de emojis.
 
 ### Símbolo: "o leque"
@@ -69,6 +70,7 @@ Domínio e alojamento, quando necessários, ficam em nome e a cargo do cliente. 
 ## Estrutura sugerida (página única, com âncoras)
 1. **Topo:** símbolo animado + "O seu negócio, encontrado." + subtítulo + botões "Começar por 100 €" e "Ver serviços".
 2. **O problema:** "Se não está no Google, não existe." Mapa e confiança: fotos, horário, avaliações.
+2b. **Autenticidade:** "Não há duas marcas iguais." ADN de cada negócio, três princípios (identidade antes de tendências, feito à medida, ligação verdadeira), cinco leques diferentes com o feixe camel sempre ao centro.
 3. **Serviços:** Arranque + 3 mensalidades (Presença+ destacado) + extras.
 4. **Como funciona:** Conversa e diagnóstico → Arranque → Acompanhamento (pode parar quando quiser).
 5. **Resultados em números:** **sem nomes de clientes** e **sem totais de seguidores** (são páginas pequenas). Mostrar médias que valorizam o trabalho: taxa de interação, crescimento de seguidores em %, alcance face aos seguidores. **Ainda por obter:** a secção está pronta mas escondida (`hidden`) até haver números reais.

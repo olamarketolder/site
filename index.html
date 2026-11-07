@@ -191,6 +191,31 @@ section{padding:clamp(88px,12vw,160px) 0;position:relative}
 .ficha li{display:flex;justify-content:space-between;padding:9px 0;border-top:1px solid var(--linha)}
 .ficha li span:last-child{color:var(--verde);font-weight:500}
 
+/* Autenticidade */
+.aut-topo{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(40px,7vw,110px);align-items:end}
+.aut-topo .cab{margin-bottom:0}
+.frase{border-left:1px solid var(--camel);padding:6px 0 6px clamp(24px,3vw,40px)}
+.frase p{font-family:var(--serif);font-size:clamp(30px,3.4vw,44px);line-height:1.15;color:var(--verde);font-weight:500;text-wrap:balance}
+.adn{margin:clamp(64px,8vw,104px) 0 0;border-top:1px solid var(--linha);border-bottom:1px solid var(--linha);padding:clamp(36px,4.5vw,56px) 0 clamp(24px,3vw,32px)}
+.adn ul{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(12px,3vw,48px);align-items:end}
+.adn svg{width:100%;max-width:150px;height:auto;margin:0 auto;overflow:visible;color:var(--verde)}
+.adn figcaption{text-align:center;margin-top:clamp(24px,3vw,36px);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--camel-txt)}
+.principios{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(28px,4vw,64px);margin-top:clamp(56px,7vw,88px)}
+.principios li{border-top:1px solid var(--camel);padding-top:24px}
+.principios h3{font-size:clamp(24px,2.2vw,30px);margin-bottom:12px}
+.principios p{color:var(--pedra-txt);max-width:24em}
+@media (prefers-reduced-motion:no-preference){
+  .js .adn:not(.in) .ray-l{opacity:0;transform:rotate(0deg)}
+  .js .adn:not(.in) .ray-c{opacity:0}
+  .js .adn.in .ray-c{stroke-dasharray:200 400;animation:disparo2 .6s calc(.25s + var(--i)*.14s) cubic-bezier(.6,0,.2,1) both}
+  .js .adn.in .ray-l{animation:abrir .9s cubic-bezier(.3,1.55,.5,1) both}
+  .js .adn.in .r1{animation-delay:calc(.55s + var(--i)*.14s)}
+  .js .adn.in .r2{animation-delay:calc(.63s + var(--i)*.14s)}
+  .js .adn.in .r3{animation-delay:calc(.71s + var(--i)*.14s)}
+  .js .adn.in .r4{animation-delay:calc(.79s + var(--i)*.14s)}
+}
+@keyframes disparo2{0%{stroke-dashoffset:200;opacity:0}12%{opacity:1}100%{stroke-dashoffset:0;opacity:1}}
+
 /* Serviços */
 .arranque{display:grid;grid-template-columns:auto 1fr auto;gap:clamp(28px,5vw,72px);align-items:center;padding:clamp(32px,4vw,52px) 0;border-top:1px solid var(--verde);border-bottom:1px solid var(--linha)}
 .arr-fim{display:flex;flex-direction:column;align-items:flex-end;gap:18px}
@@ -302,6 +327,8 @@ footer a:hover{color:var(--marfim)}
 
 /* ===== Ecrãs pequenos ===== */
 @media (max-width:900px){
+  .aut-topo{grid-template-columns:1fr;gap:36px}
+  .principios{grid-template-columns:1fr;gap:36px}
   .menu{display:none}
   .prob{grid-template-columns:1fr}
   .mapa{justify-self:stretch;max-width:none;aspect-ratio:4/4.4}
@@ -362,6 +389,7 @@ footer a:hover{color:var(--marfim)}
       <span class="marca">Marketolder</span>
     </a>
     <div class="menu">
+      <a href="#autenticidade">Autenticidade</a>
       <a href="#servicos">Serviços</a>
       <a href="#como">Como funciona</a>
       <a href="#sobre">Sobre</a>
@@ -385,7 +413,7 @@ footer a:hover{color:var(--marfim)}
   </div>
   <p class="marca" aria-hidden="true">Marketolder</p>
   <h1 class="sobe"><span class="so-leitor">Marketolder: </span>O seu negócio, <em>encontrado.</em></h1>
-  <p class="lead sobe">Pomos o seu negócio onde os clientes o procuram: no Google e nas redes sociais. Com cuidado, todos os meses.</p>
+  <p class="lead sobe">Pomos o seu negócio onde os clientes o procuram: no Google e nas redes sociais. Com uma identidade que é só sua.</p>
   <div class="ctas sobe">
     <a class="btn" href="pedido.html#arranque">Começar por 100 € <span class="seta" aria-hidden="true">→</span></a>
     <a class="btn alt" href="#servicos">Ver serviços</a>
@@ -430,6 +458,39 @@ footer a:hover{color:var(--marfim)}
     </div>
   </div>
 </section>
+
+<!-- AUTENTICIDADE -->
+<section id="autenticidade" class="autent" aria-labelledby="t-autent">
+  <div class="w">
+    <div class="aut-topo">
+      <div class="cab rv">
+        <p class="rot"><span class="n" aria-hidden="true"></span>Autenticidade</p>
+        <h2 id="t-autent">Não há duas marcas <em>iguais.</em></h2>
+        <p class="lead">Cada negócio tem o seu ADN: a história, as pessoas, a maneira de fazer. O nosso trabalho é encontrá-lo e mostrá-lo, com cuidado, em tudo o que publicamos.</p>
+      </div>
+      <blockquote class="frase rv"><p>Uma tendência dura uma semana. <em>Uma marca autêntica fica.</em></p></blockquote>
+    </div>
+
+    <figure class="adn rv">
+      <ul aria-hidden="true">
+        <li style="--i:0"><svg viewBox="-170 -100 340 190"><g transform="translate(0 70)" stroke-width="26" stroke-linecap="round"><line class="ray ray-l r4" style="--a:-64deg" y1="-50" y2="-150" stroke="currentColor"/><line class="ray ray-l r2" style="--a:-32deg" y1="-50" y2="-150" stroke="currentColor"/><line class="ray ray-l r3" style="--a:64deg" y1="-50" y2="-150" stroke="currentColor"/><line class="ray ray-l r1" style="--a:32deg" y1="-50" y2="-150" stroke="currentColor"/><line class="ray ray-c" style="--a:0deg" y1="-50" y2="-150" stroke="#B08D57"/></g></svg></li>
+        <li style="--i:1"><svg viewBox="-170 -100 340 190"><g transform="translate(0 70)" stroke-width="20" stroke-linecap="round"><line class="ray ray-l r4" style="--a:-42deg" y1="-38" y2="-160" stroke="currentColor"/><line class="ray ray-l r2" style="--a:-21deg" y1="-38" y2="-160" stroke="currentColor"/><line class="ray ray-l r3" style="--a:42deg" y1="-38" y2="-160" stroke="currentColor"/><line class="ray ray-l r1" style="--a:21deg" y1="-38" y2="-160" stroke="currentColor"/><line class="ray ray-c" style="--a:0deg" y1="-38" y2="-160" stroke="#B08D57"/></g></svg></li>
+        <li style="--i:2"><svg viewBox="-170 -100 340 190"><g transform="translate(0 70)" stroke-width="30" stroke-linecap="round"><line class="ray ray-l r4" style="--a:-82deg" y1="-62" y2="-140" stroke="currentColor"/><line class="ray ray-l r2" style="--a:-41deg" y1="-62" y2="-140" stroke="currentColor"/><line class="ray ray-l r3" style="--a:82deg" y1="-62" y2="-140" stroke="currentColor"/><line class="ray ray-l r1" style="--a:41deg" y1="-62" y2="-140" stroke="currentColor"/><line class="ray ray-c" style="--a:0deg" y1="-62" y2="-140" stroke="#B08D57"/></g></svg></li>
+        <li style="--i:3"><svg viewBox="-170 -100 340 190"><g transform="translate(0 70)" stroke-width="16" stroke-linecap="round"><line class="ray ray-l r4" style="--a:-54deg" y1="-28" y2="-152" stroke="currentColor"/><line class="ray ray-l r2" style="--a:-27deg" y1="-28" y2="-152" stroke="currentColor"/><line class="ray ray-l r3" style="--a:54deg" y1="-28" y2="-152" stroke="currentColor"/><line class="ray ray-l r1" style="--a:27deg" y1="-28" y2="-152" stroke="currentColor"/><line class="ray ray-c" style="--a:0deg" y1="-28" y2="-152" stroke="#B08D57"/></g></svg></li>
+        <li style="--i:4"><svg viewBox="-170 -100 340 190"><g transform="translate(0 70)" stroke-width="36" stroke-linecap="round"><line class="ray ray-l r4" style="--a:-72deg" y1="-52" y2="-132" stroke="currentColor"/><line class="ray ray-l r2" style="--a:-36deg" y1="-52" y2="-132" stroke="currentColor"/><line class="ray ray-l r3" style="--a:72deg" y1="-52" y2="-132" stroke="currentColor"/><line class="ray ray-l r1" style="--a:36deg" y1="-52" y2="-132" stroke="currentColor"/><line class="ray ray-c" style="--a:0deg" y1="-52" y2="-132" stroke="#B08D57"/></g></svg></li>
+      </ul>
+      <figcaption>A mesma atenção ao centro. Uma forma diferente para cada marca.</figcaption>
+    </figure>
+
+    <ul class="principios">
+      <li class="rv"><h3>Identidade antes de tendências</h3><p>Usamos o que está na moda só quando serve a sua marca. Nunca o contrário.</p></li>
+      <li class="rv"><h3>Feito à medida</h3><p>Nada de modelos repetidos. Cada publicação nasce daquilo que torna o seu negócio único.</p></li>
+      <li class="rv"><h3>Ligação verdadeira</h3><p>As pessoas voltam às marcas em que confiam. É a autenticidade que cria essa confiança.</p></li>
+    </ul>
+  </div>
+</section>
+
+<hr class="fio">
 
 <!-- SERVIÇOS -->
 <section id="servicos" aria-labelledby="t-servicos">
