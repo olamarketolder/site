@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Marketolder · Marketing para pequenos negócios em Braga</title>
-<meta name="description" content="Pomos o seu negócio onde os clientes o procuram: ficha Google, Instagram, Facebook, logótipo e site para pequenos negócios em Braga. Arranque por 100 €.">
+<meta name="description" content="Pomos o seu negócio onde os clientes o procuram: ficha Google, redes sociais, logótipo, identidade visual e site para pequenos negócios em Braga. Arranque por 100 €.">
 <link rel="canonical" href="https://marketolder.pt/">
 <meta name="theme-color" content="#F3EEE2">
 <meta name="format-detection" content="telephone=no">
@@ -92,8 +92,13 @@ h1{font-size:clamp(50px,8.4vw,112px)}
 h2{font-size:clamp(38px,5.2vw,68px);text-wrap:balance}
 h3{font-size:clamp(26px,2.4vw,32px)}
 em{font-style:italic;font-weight:500}
+/* Algarismos alinhados (o Cormorant usa por defeito algarismos antigos, que tornam "100" difícil de ler) */
+h1,h2,h3,.preco,.anel,.val{font-variant-numeric:lining-nums}
 p{text-wrap:pretty}
 .rot{display:flex;align-items:center;gap:14px;font-size:12px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--camel-txt)}
+main{counter-reset:sec}
+main > section:not([hidden]){counter-increment:sec}
+.rot .n::before{content:counter(sec,upper-roman)}
 .rot .n{font-family:var(--serif);font-size:17px;letter-spacing:.06em}
 .rot .n::after{content:"";display:inline-block;width:28px;height:1px;background:var(--fio);vertical-align:middle;margin-left:14px}
 .lead{font-size:clamp(18px,1.6vw,21px);color:var(--pedra-txt);max-width:34em}
@@ -161,7 +166,7 @@ section{padding:clamp(88px,12vw,160px) 0;position:relative}
 .verde .lead,.verde p{color:rgba(243,238,226,.8)}
 .fio{height:1px;background:var(--fio);border:0;max-width:calc(var(--w) - 48px);margin:0 auto}
 
-/* I · O problema */
+/* O problema */
 .prob{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,7vw,110px);align-items:center}
 .prob .cab{margin-bottom:0}
 .pontos{list-style:none;margin-top:40px;border-top:1px solid var(--linha-v)}
@@ -186,12 +191,14 @@ section{padding:clamp(88px,12vw,160px) 0;position:relative}
 .ficha li{display:flex;justify-content:space-between;padding:9px 0;border-top:1px solid var(--linha)}
 .ficha li span:last-child{color:var(--verde);font-weight:500}
 
-/* II · Serviços */
+/* Serviços */
 .arranque{display:grid;grid-template-columns:auto 1fr auto;gap:clamp(28px,5vw,72px);align-items:center;padding:clamp(32px,4vw,52px) 0;border-top:1px solid var(--verde);border-bottom:1px solid var(--linha)}
 .arranque .preco{font-family:var(--serif);font-size:clamp(64px,7vw,96px);font-weight:600;color:var(--verde);line-height:.9;white-space:nowrap}
 .tag{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--pedra-txt);min-height:18px}
 .arranque .tag{color:var(--camel-txt);margin-bottom:6px}
 .arranque ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px 32px;font-size:16px}
+.arranque li{display:flex;align-items:baseline}
+.arranque li::before{transform:none}
 .lista li::before{content:"";flex:none;display:inline-block;width:10px;height:1px;background:var(--camel);vertical-align:middle;margin-right:12px;transform:translateY(-4px)}
 .planos{display:grid;grid-template-columns:repeat(3,1fr);margin-top:clamp(56px,7vw,96px);align-items:stretch}
 .plano{padding:clamp(32px,3.4vw,48px) clamp(24px,2.6vw,40px);display:flex;flex-direction:column;border-left:1px solid var(--linha)}
@@ -221,40 +228,42 @@ section{padding:clamp(88px,12vw,160px) 0;position:relative}
 .carta li::after{content:"";order:1;flex:1;min-width:20px;border-bottom:1px dotted rgba(30,58,47,.35);transform:translateY(-4px)}
 .carta b{order:2;font-weight:500;color:var(--verde);white-space:nowrap;font-variant-numeric:tabular-nums}
 
-/* III · Como funciona */
+/* Como funciona */
 .passos{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(28px,4vw,64px);position:relative;list-style:none}
 .passos::before{content:"";position:absolute;left:0;right:0;top:34px;height:1px;background:var(--fio)}
 .passo .num{font-family:var(--serif);font-size:30px;font-weight:600;color:var(--verde);width:68px;height:68px;border-radius:50%;border:1px solid var(--camel);display:grid;place-items:center;background:var(--marfim);position:relative;margin-bottom:28px}
 .passo h3{margin-bottom:12px}
 .passo p{color:var(--pedra-txt);max-width:24em}
 
-/* IV · Clientes */
-.clientes{text-align:center}
-.clientes .rot{justify-content:center}
-.clientes h2{margin:24px auto 0;max-width:16ch}
-.nomes{list-style:none;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:18px 0;margin-top:clamp(48px,6vw,72px);border-top:1px solid var(--linha-v);border-bottom:1px solid var(--linha-v);padding:clamp(32px,4vw,48px) 0}
-.nomes li{font-family:var(--serif);font-size:clamp(30px,3.6vw,46px);font-weight:500;color:var(--marfim);display:flex;align-items:center}
-.nomes li + li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--camel);margin:0 clamp(24px,4vw,56px)}
-.clientes .lead{margin:36px auto 0}
-.numeros{display:grid;grid-template-columns:repeat(3,1fr);margin-top:56px;border-top:1px solid var(--linha-v);border-bottom:1px solid var(--linha-v)}
-.numeros div{padding:clamp(36px,4vw,56px) 24px;border-left:1px solid var(--linha-v)}
-.numeros div:first-child{border-left:0}
-.numeros .val{font-family:var(--serif);font-size:clamp(64px,8vw,104px);font-weight:600;line-height:1;color:var(--marfim)}
-.numeros .leg{margin-top:12px;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--camel-claro)}
+/* Resultados */
+.resultados{text-align:center}
+.resultados .rot{justify-content:center}
+.resultados h2{margin:24px auto 22px;max-width:16ch}
+.resultados .lead{margin:0 auto}
+.numeros{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);margin-top:clamp(48px,6vw,72px);border-top:1px solid var(--linha-v);border-bottom:1px solid var(--linha-v)}
+.numeros li{padding:clamp(36px,4vw,56px) 24px;border-left:1px solid var(--linha-v)}
+.numeros li:first-child{border-left:0}
+.numeros .val{font-family:var(--serif);font-size:clamp(64px,8vw,104px);font-weight:600;line-height:1;color:var(--marfim);font-variant-numeric:lining-nums}
+.numeros .leg{margin-top:14px;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--camel-claro)}
+.fonte{margin-top:24px;font-size:13px;color:rgba(243,238,226,.6)}
+.sem-resultados{display:none}
+section[hidden] + .sem-resultados{display:block}
 
-/* V · Sobre */
+/* Sobre */
 .sobre{text-align:center;max-width:880px;margin:0 auto}
 .sobre .rot{justify-content:center}
 .sobre h2{margin:24px 0 28px}
 .sobre .lead{margin:0 auto}
-.selos{display:flex;justify-content:center;gap:clamp(32px,6vw,88px);margin-top:60px;flex-wrap:wrap;list-style:none}
-.selo{display:flex;flex-direction:column;align-items:center;gap:14px;max-width:230px}
+.selos{display:grid;grid-template-columns:repeat(3,1fr);gap:40px clamp(24px,4vw,56px);margin-top:60px;list-style:none}
+.selo{display:flex;flex-direction:column;align-items:center;gap:14px}
+.selo span{max-width:200px}
 .selo .anel{width:96px;height:96px;border-radius:50%;border:1px solid var(--camel);display:grid;place-items:center;font-family:var(--serif);font-size:46px;font-weight:600;color:var(--verde);position:relative}
 .selo .anel::after{content:"";position:absolute;inset:6px;border-radius:50%;border:1px solid var(--linha)}
 .selo .anel svg{width:46px;height:auto;color:var(--verde)}
+.selo .anel-num{font-size:32px}
 .selo span{font-size:14px;color:var(--pedra-txt);line-height:1.5}
 
-/* VI · Contacto */
+/* Contacto */
 .contacto{text-align:center}
 .contacto .rot{justify-content:center}
 .contacto h2{max-width:14ch;margin:24px auto 26px}
@@ -299,14 +308,13 @@ footer a:hover{color:var(--marfim)}
   .passos::before{left:34px;right:auto;top:0;bottom:0;width:1px;height:auto}
   .passo{display:grid;grid-template-columns:68px 1fr;column-gap:22px}
   .passo .num{grid-row:span 2;margin:0}
-  .nomes{flex-direction:column;gap:22px}
-  .nomes li + li::before{display:none}
   .numeros{grid-template-columns:1fr}
-  .numeros div{border-left:0;border-top:1px solid var(--linha-v)}
-  .numeros div:first-child{border-top:0}
+  .numeros li{border-left:0;border-top:1px solid var(--linha-v)}
+  .numeros li:first-child{border-top:0}
   footer .w{flex-direction:column;align-items:flex-start}
 }
 @media (max-width:520px){
+  .selos{grid-template-columns:1fr}
   body{font-size:16px}
   .pontos li{grid-template-columns:1fr;gap:4px}
   .ctas{width:100%}
@@ -368,7 +376,7 @@ footer a:hover{color:var(--marfim)}
   </div>
   <p class="marca" aria-hidden="true">Marketolder</p>
   <h1 class="sobe"><span class="so-leitor">Marketolder: </span>O seu negócio, <em>encontrado.</em></h1>
-  <p class="lead sobe">Pomos o seu negócio onde os clientes o procuram: no Google, no Instagram e no Facebook. Com cuidado, todos os meses.</p>
+  <p class="lead sobe">Pomos o seu negócio onde os clientes o procuram: no Google e nas redes sociais. Com cuidado, todos os meses.</p>
   <div class="ctas sobe">
     <a class="btn" href="#contacto">Começar por 100 € <span class="seta" aria-hidden="true">→</span></a>
     <a class="btn alt" href="#servicos">Ver serviços</a>
@@ -378,11 +386,11 @@ footer a:hover{color:var(--marfim)}
 
 <main id="conteudo">
 
-<!-- I · O PROBLEMA -->
+<!-- O PROBLEMA -->
 <section class="verde" id="problema" aria-labelledby="t-problema">
   <div class="w prob">
     <div class="cab rv">
-      <p class="rot"><span class="n">I</span>O problema</p>
+      <p class="rot"><span class="n" aria-hidden="true"></span>O problema</p>
       <h2 id="t-problema">Se não está no Google, não existe.</h2>
       <p class="lead">Antes de escolher onde almoçar, cortar o cabelo ou levar o carro, quase toda a gente pesquisa no telemóvel. Quem não aparece, não é escolhido.</p>
       <ul class="pontos">
@@ -414,18 +422,18 @@ footer a:hover{color:var(--marfim)}
   </div>
 </section>
 
-<!-- II · SERVIÇOS -->
+<!-- SERVIÇOS -->
 <section id="servicos" aria-labelledby="t-servicos">
   <div class="w">
     <div class="cab rv">
-      <p class="rot"><span class="n">II</span>Serviços</p>
+      <p class="rot"><span class="n" aria-hidden="true"></span>Serviços</p>
       <h2 id="t-servicos">Comece simples. <em>Cresça quando quiser.</em></h2>
       <p class="lead">Um arranque único para pôr tudo de pé. Depois, se quiser, um acompanhamento mensal ao ritmo do seu negócio.</p>
     </div>
 
     <div class="arranque rv">
       <div><p class="tag">Pagamento único</p><h3>Arranque</h3></div>
-      <ul class="lista"><li>Ficha Google criada e otimizada</li><li>Instagram e Facebook</li><li>Logótipo simples</li><li>Primeira publicação</li></ul>
+      <ul class="lista"><li>Ficha Google criada e otimizada</li><li>Criação de redes sociais: Instagram, Facebook e TikTok</li><li>Logótipo simples</li><li>Guia de identidade visual</li><li>Primeira publicação</li></ul>
       <p class="preco">100&nbsp;€</p>
     </div>
 
@@ -468,66 +476,67 @@ footer a:hover{color:var(--marfim)}
 
 <hr class="fio">
 
-<!-- III · COMO FUNCIONA -->
+<!-- COMO FUNCIONA -->
 <section id="como" aria-labelledby="t-como">
   <div class="w">
     <div class="cab rv">
-      <p class="rot"><span class="n">III</span>Como funciona</p>
+      <p class="rot"><span class="n" aria-hidden="true"></span>Como funciona</p>
       <h2 id="t-como">Três passos. <em>Nenhuma surpresa.</em></h2>
     </div>
     <ol class="passos">
-      <li class="passo rv"><span class="num" aria-hidden="true">I</span><h3>Conversa</h3><p>Conhecemos o seu negócio e vemos o que já existe online.</p></li>
-      <li class="passo rv"><span class="num" aria-hidden="true">II</span><h3>Arranque</h3><p>Ficha Google, redes e logótipo prontos, com a primeira publicação feita.</p></li>
+      <li class="passo rv"><span class="num" aria-hidden="true">I</span><h3>Conversa e diagnóstico</h3><p>Conhecemos o seu negócio e fazemos um diagnóstico do que já existe online: o que funciona e o que falta.</p></li>
+      <li class="passo rv"><span class="num" aria-hidden="true">II</span><h3>Arranque</h3><p>Ficha Google, redes sociais, logótipo e guia de identidade visual prontos, com a primeira publicação feita.</p></li>
       <li class="passo rv"><span class="num" aria-hidden="true">III</span><h3>Acompanhamento</h3><p>Se quiser, continuamos todos os meses. Pode parar quando entender.</p></li>
     </ol>
   </div>
 </section>
 
-<!-- IV · CLIENTES -->
-<section class="verde clientes" id="clientes" aria-labelledby="t-clientes">
+<!-- RESULTADOS -->
+<!--
+  Resultados: secção pronta mas escondida até haver números reais.
+  Para mostrar: preencher os três valores e o período, e apagar o atributo hidden da <section>.
+  A numeração romana das secções ajusta-se sozinha.
+-->
+<section class="verde resultados" id="resultados" aria-labelledby="t-resultados" hidden>
   <div class="w">
     <div class="rv">
-      <p class="rot"><span class="n">IV</span>Clientes</p>
-      <h2 id="t-clientes">Negócios que já <em>acompanhamos.</em></h2>
+      <p class="rot"><span class="n" aria-hidden="true"></span>Resultados</p>
+      <h2 id="t-resultados">O trabalho, <em>em números.</em></h2>
+      <p class="lead">Médias das páginas que acompanhamos. Contam o que interessa: quantas pessoas veem, reagem e voltam.</p>
     </div>
-    <ul class="nomes rv">
-      <li>Aloebela</li>
-      <li>Talho Manecas</li>
-      <li>Zirra Zirra</li>
+    <ul class="numeros rv">
+      <!-- TODO: número real. Taxa de interação média (interações ÷ alcance), em %. Fonte: Meta Business Suite. -->
+      <li><p class="val"><!-- TODO --> %</p><p class="leg">Taxa de interação média</p></li>
+      <!-- TODO: número real. Crescimento médio de seguidores no período, em %. -->
+      <li><p class="val">+<!-- TODO --> %</p><p class="leg">Crescimento de seguidores</p></li>
+      <!-- TODO: número real. Alcance médio a dividir pelos seguidores (ex.: 3×). -->
+      <li><p class="val"><!-- TODO -->×</p><p class="leg">Alcance para lá dos seguidores</p></li>
     </ul>
-    <!--
-      Bloco "Resultados em números", pronto a mostrar: preencher os valores e remover o atributo hidden.
-      TODO: número real (seguidores somados das três páginas)
-      TODO: número real (alcance somado)
-      TODO: número real (publicações feitas)
-    -->
-    <div class="numeros rv" hidden>
-      <div><p class="val"><!-- TODO: número real --></p><p class="leg">Seguidores</p></div>
-      <div><p class="val"><!-- TODO: número real --></p><p class="leg">Pessoas alcançadas</p></div>
-      <div><p class="val"><!-- TODO: número real --></p><p class="leg">Publicações</p></div>
-    </div>
+    <p class="fonte rv"><!-- TODO: período real -->Dados de [mês] a [mês] de 2026, Meta Business Suite.</p>
   </div>
 </section>
+<hr class="fio sem-resultados">
 
-<!-- V · SOBRE -->
+<!-- SOBRE -->
 <section id="sobre" aria-labelledby="t-sobre">
   <div class="w sobre">
     <div class="rv">
-      <p class="rot"><span class="n">V</span>Sobre</p>
+      <p class="rot"><span class="n" aria-hidden="true"></span>Sobre</p>
       <h2 id="t-sobre">Marketing feito por quem <em>o estudou a sério.</em></h2>
       <p class="lead">A Marketolder nasceu de uma licenciatura em Marketing levada com rigor. Cada publicação tem um porquê. Cada mês, um relatório simples e claro.</p>
     </div>
     <ul class="selos rv">
       <li class="selo"><div class="anel" aria-hidden="true"><svg viewBox="-170 -100 340 190"><use href="#leque" x="-170" y="-100" width="340" height="190"/></svg></div><span>Licenciatura em Marketing</span></li>
-      <li class="selo"><div class="anel" aria-hidden="true">2</div><span>Duas bolsas de excelência como melhor aluno do curso</span></li>
+      <li class="selo"><div class="anel" aria-hidden="true">1.º</div><span>Prémios de mérito como melhor aluno do curso</span></li>
+      <li class="selo"><div class="anel anel-num" aria-hidden="true">200+</div><span>Mais de 200 horas de formação em marketing digital</span></li>
     </ul>
   </div>
 </section>
 
-<!-- VI · CONTACTO -->
+<!-- CONTACTO -->
 <section class="verde contacto" id="contacto" aria-labelledby="t-contacto">
   <div class="w rv">
-    <p class="rot"><span class="n">VI</span>Contacto</p>
+    <p class="rot"><span class="n" aria-hidden="true"></span>Contacto</p>
     <h2 id="t-contacto">Vamos pôr o seu negócio <em>no mapa?</em></h2>
     <p class="lead">Diga-nos o nome do negócio e a localidade. Em 24 horas respondemos com o que vimos online, sem compromisso.</p>
     <a class="email" href="mailto:ola@marketolder.pt?subject=O%20meu%20neg%C3%B3cio&amp;body=Nome%20do%20neg%C3%B3cio%3A%20%0ALocalidade%3A%20%0A">ola@marketolder.pt</a>

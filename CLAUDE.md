@@ -44,10 +44,10 @@ Fala como um bom alfaiate: sabe muito, explica pouco e com precisão. Diretos, c
 Donos de pequenos negócios locais (cafés, restaurantes, cabeleireiros, oficinas, clínicas, lojas), sobretudo na zona de Braga, com presença digital fraca ou inexistente. Visitam o site no **telemóvel**. Não são técnicos: tudo tem de ser claro em segundos.
 
 ## Argumento de credibilidade
-O fundador é licenciado em Marketing e recebeu **duas bolsas de excelência como melhor aluno do curso**. Usar numa secção "Sobre" curta, sem nome nem fotografia.
+O fundador é licenciado em Marketing, recebeu **prémios de mérito como melhor aluno do curso** e tem **mais de 200 horas de formação em marketing digital**. Usar numa secção "Sobre" curta, sem nome nem fotografia. (Indicação do dono: não falar em "duas bolsas de excelência".)
 
 ## Preços (definidos pelo dono, usar exatamente estes)
-**Arranque, pagamento único, 100 €:** ficha Google criada e otimizada, Instagram e Facebook, logótipo simples, primeira publicação.
+**Arranque, pagamento único, 100 €:** ficha Google criada e otimizada, criação de redes sociais (Instagram, Facebook e TikTok), logótipo simples, guia de identidade visual, primeira publicação.
 
 **Mensalidades**
 - **Presença, 75 €/mês:** 1 publicação por semana, design com a marca do cliente, agendamento nas redes.
@@ -70,8 +70,8 @@ Domínio e alojamento, quando necessários, ficam em nome e a cargo do cliente. 
 1. **Topo:** símbolo animado + "O seu negócio, encontrado." + subtítulo + botões "Começar por 100 €" e "Ver serviços".
 2. **O problema:** "Se não está no Google, não existe." Mapa e confiança: fotos, horário, avaliações.
 3. **Serviços:** Arranque + 3 mensalidades (Presença+ destacado) + extras.
-4. **Como funciona:** Conversa → Arranque → Acompanhamento (pode parar quando quiser).
-5. **Resultados em números:** substitui a antiga lista de clientes. Números reais somados das páginas geridas (Aloebela, Talho Manecas, Zirra Zirra), como seguidores, alcance ou publicações. **Ainda por obter:** deixar o bloco preparado com TODO.
+4. **Como funciona:** Conversa e diagnóstico → Arranque → Acompanhamento (pode parar quando quiser).
+5. **Resultados em números:** **sem nomes de clientes** e **sem totais de seguidores** (são páginas pequenas). Mostrar médias que valorizam o trabalho: taxa de interação, crescimento de seguidores em %, alcance face aos seguidores. **Ainda por obter:** a secção está pronta mas escondida (`hidden`) até haver números reais.
 6. **Sobre:** marketing feito por quem o estudou a sério (licenciatura + 2 bolsas de excelência).
 7. **Contacto:** "Vamos pôr o seu negócio no mapa?" + ola@marketolder.pt (mailto). Promessa: resposta em 24 horas com o que vimos online, sem compromisso.
 8. **Rodapé:** símbolo, Braga · Portugal, e-mail, ©.
