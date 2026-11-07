@@ -96,6 +96,7 @@ O site tem várias páginas (decisão do dono): `index.html` (página inicial, c
 - Site estático (HTML, CSS e JS simples, sem frameworks pesados), alojado no **GitHub Pages** deste repositório; domínio **marketolder.pt** (DNS na Amen, tratado à parte).
 - Mobile-first, rápido (Lighthouse 95+), acessível (contraste AA, navegação por teclado, `alt` nos elementos).
 - SEO local: `title` e `description` em PT-PT, Open Graph com imagem de partilha (feita em SVG/PNG com a marca), dados estruturados `LocalBusiness`/`ProfessionalService` com área de serviço Braga.
+- Formulário (`pedido.html`): envio pelo **Web3Forms** (chave pública em `WEB3FORMS_CHAVE` e no campo `access_key`; os pedidos chegam ao e-mail associado à chave). Se o envio falhar ou demorar mais de 10 s, o formulário oferece "Enviar este pedido pelo WhatsApp" com o pedido escrito. O FormSubmit foi abandonado (servidor em baixo, erro 522, nov 2026).
 - Favicon a partir do símbolo (`assets/marketolder-simbolo-verde.svg`).
 - Ficheiro `CNAME` com `marketolder.pt` só quando o dono aprovar a publicação.
 

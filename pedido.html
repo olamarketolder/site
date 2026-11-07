@@ -148,15 +148,16 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--verde);b
 
     <div class="entra d1">
       <!--
-        Envio através do FormSubmit (formsubmit.co): não precisa de servidor.
-        No primeiro envio, o FormSubmit manda um e-mail de ativação para ola@marketolder.pt; é preciso clicar em "Activate Form" uma vez.
+        Envio através do Web3Forms (web3forms.com): não precisa de servidor.
+        A chave de acesso é pública por natureza; os pedidos chegam ao e-mail associado a ela no Web3Forms.
+        Sem JavaScript, o formulário envia diretamente e volta a esta página com "Pedido enviado".
       -->
-      <form id="form" action="https://formsubmit.co/ola@marketolder.pt" method="POST" novalidate>
-        <input type="hidden" name="_subject" id="assunto" value="Novo pedido pelo site">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://marketolder.pt/pedido.html#enviado">
-        <div class="mel" aria-hidden="true"><label for="_honey">Não preencher</label><input type="text" name="_honey" id="_honey" tabindex="-1" autocomplete="off"></div>
+      <form id="form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+        <input type="hidden" name="access_key" value="467553e6-2d9a-46cf-b9c1-a9fa7a4d4eaa">
+        <input type="hidden" name="subject" id="assunto" value="Novo pedido pelo site">
+        <input type="hidden" name="from_name" value="Site Marketolder">
+        <input type="hidden" name="redirect" value="https://marketolder.pt/pedido.html#enviado">
+        <div class="mel" aria-hidden="true"><label for="botcheck">Não preencher</label><input type="text" name="botcheck" id="botcheck" tabindex="-1" autocomplete="off"></div>
 
         <div class="campo todo">
           <label for="servico">Serviço</label>
@@ -250,7 +251,7 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--verde);b
 <script>
 (function(){
   /* Chave pública do Web3Forms (web3forms.com). Vazio = usa o FormSubmit. */
-  var WEB3FORMS_CHAVE='';
+  var WEB3FORMS_CHAVE='467553e6-2d9a-46cf-b9c1-a9fa7a4d4eaa';
 
   var P={
     'arranque':{tag:'Pagamento único',nome:'Arranque',preco:'100 €',itens:['Ficha Google criada e otimizada','Criação de redes sociais: Instagram, Facebook e TikTok','Logótipo','Animação do logótipo','Guia de identidade visual','Primeira publicação']},
@@ -331,12 +332,12 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--verde);b
     var pedido;
     if(WEB3FORMS_CHAVE){
       var w={access_key:WEB3FORMS_CHAVE,subject:$('assunto').value,from_name:'Site Marketolder',replyto:dados['email'],botcheck:''};
-      Object.keys(dados).forEach(function(k){if(k.charAt(0)!=='_')w[k]=dados[k]});
+      Object.keys(dados).forEach(function(k){if(k.charAt(0)!=='_'&&['access_key','subject','from_name','redirect','botcheck'].indexOf(k)<0)w[k]=dados[k]});
       pedido={url:'https://api.web3forms.com/submit',corpo:w};
     } else {
       pedido={url:'https://formsubmit.co/ajax/ola@marketolder.pt',corpo:dados};
     }
-    if(dados['_honey']){concluido('');repor();return}
+    if(dados['botcheck']){concluido('');repor();return}
     var ctl=window.AbortController?new AbortController():null;
     var limite=setTimeout(function(){if(ctl)ctl.abort()},10000);
     fetch(pedido.url,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(pedido.corpo),signal:ctl?ctl.signal:undefined})
