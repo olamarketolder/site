@@ -193,6 +193,7 @@ section{padding:clamp(88px,12vw,160px) 0;position:relative}
 
 /* Serviços */
 .arranque{display:grid;grid-template-columns:auto 1fr auto;gap:clamp(28px,5vw,72px);align-items:center;padding:clamp(32px,4vw,52px) 0;border-top:1px solid var(--verde);border-bottom:1px solid var(--linha)}
+.arr-fim{display:flex;flex-direction:column;align-items:flex-end;gap:18px}
 .arranque .preco{font-family:var(--serif);font-size:clamp(64px,7vw,96px);font-weight:600;color:var(--verde);line-height:.9;white-space:nowrap}
 .tag{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--pedra-txt);min-height:18px}
 .arranque .tag{color:var(--camel-txt);margin-bottom:6px}
@@ -224,9 +225,13 @@ section{padding:clamp(88px,12vw,160px) 0;position:relative}
 .extras-t h3{font-size:clamp(30px,3vw,40px)}
 .extras-t p{font-size:14px;color:var(--pedra-txt)}
 .carta{list-style:none;columns:2;column-gap:clamp(40px,6vw,96px);margin-top:12px}
-.carta li{display:flex;align-items:baseline;gap:10px;padding:16px 0;break-inside:avoid;font-size:16px}
-.carta li::after{content:"";order:1;flex:1;min-width:20px;border-bottom:1px dotted rgba(30,58,47,.35);transform:translateY(-4px)}
+.carta li{break-inside:avoid}
+.carta a{display:flex;align-items:baseline;gap:10px;padding:16px 0;font-size:16px;text-decoration:none;transition:color .2s}
+.carta a::after{content:"";order:1;flex:1;min-width:20px;border-bottom:1px dotted rgba(30,58,47,.35);transform:translateY(-4px);transition:border-color .2s}
 .carta b{order:2;font-weight:500;color:var(--verde);white-space:nowrap;font-variant-numeric:tabular-nums}
+.carta a:hover{color:var(--verde)}
+.carta a:hover::after{border-bottom-color:var(--camel)}
+.carta a:hover span{text-decoration:underline;text-decoration-color:var(--camel);text-underline-offset:4px}
 
 /* Como funciona */
 .passos{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(28px,4vw,64px);position:relative;list-style:none}
@@ -267,8 +272,11 @@ section[hidden] + .sem-resultados{display:block}
 .contacto{text-align:center}
 .contacto .rot{justify-content:center}
 .contacto h2{max-width:14ch;margin:24px auto 26px}
-.contacto .lead{margin:0 auto 46px}
-.email{font-family:var(--serif);font-size:clamp(32px,4.6vw,58px);font-weight:500;font-style:italic;color:var(--marfim);text-decoration:none;border-bottom:1px solid var(--camel);padding-bottom:6px;transition:color .3s,border-color .3s;overflow-wrap:anywhere}
+.contacto .lead{margin:0 auto 40px}
+.btn-claro{background:var(--marfim);color:var(--verde);border-color:var(--marfim);min-height:58px;padding:0 38px}
+.btn-claro:hover{background:#fff;border-color:#fff}
+.ou{margin-top:26px;font-size:15px}
+.email{font-family:var(--serif);font-size:24px;font-weight:500;font-style:italic;color:var(--marfim);text-decoration:none;border-bottom:1px solid var(--camel);padding-bottom:2px;margin-left:4px;transition:color .3s,border-color .3s;overflow-wrap:anywhere}
 .email:hover{color:var(--camel-claro);border-color:var(--camel-claro)}
 .garantias{list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:10px 32px;margin-top:48px;font-size:14px;color:rgba(243,238,226,.75)}
 .garantias li{display:flex;align-items:center;gap:10px}
@@ -300,6 +308,7 @@ footer a:hover{color:var(--marfim)}
   .pino,.onda{top:26%}
   .arranque{grid-template-columns:1fr;gap:18px}
   .arranque ul{grid-template-columns:1fr}
+  .arr-fim{align-items:stretch}
   .planos{grid-template-columns:1fr;gap:16px}
   .plano,.plano:first-child,.plano.dest + .plano{border:1px solid var(--linha)}
   .plano.dest{margin:0;order:-1;padding-top:clamp(32px,3.4vw,48px);padding-bottom:clamp(32px,3.4vw,48px);border:0}
@@ -357,7 +366,7 @@ footer a:hover{color:var(--marfim)}
       <a href="#como">Como funciona</a>
       <a href="#sobre">Sobre</a>
     </div>
-    <a class="nav-cta" href="#contacto">Falar connosco</a>
+    <a class="nav-cta" href="pedido.html">Falar connosco</a>
   </div>
 </nav>
 
@@ -378,7 +387,7 @@ footer a:hover{color:var(--marfim)}
   <h1 class="sobe"><span class="so-leitor">Marketolder: </span>O seu negócio, <em>encontrado.</em></h1>
   <p class="lead sobe">Pomos o seu negócio onde os clientes o procuram: no Google e nas redes sociais. Com cuidado, todos os meses.</p>
   <div class="ctas sobe">
-    <a class="btn" href="#contacto">Começar por 100 € <span class="seta" aria-hidden="true">→</span></a>
+    <a class="btn" href="pedido.html#arranque">Começar por 100 € <span class="seta" aria-hidden="true">→</span></a>
     <a class="btn alt" href="#servicos">Ver serviços</a>
   </div>
   <span class="desce" aria-hidden="true"></span>
@@ -434,7 +443,7 @@ footer a:hover{color:var(--marfim)}
     <div class="arranque rv">
       <div><p class="tag">Pagamento único</p><h3>Arranque</h3></div>
       <ul class="lista"><li>Ficha Google criada e otimizada</li><li>Criação de redes sociais: Instagram, Facebook e TikTok</li><li>Logótipo simples</li><li>Guia de identidade visual</li><li>Primeira publicação</li></ul>
-      <p class="preco">100&nbsp;€</p>
+      <div class="arr-fim"><p class="preco">100&nbsp;€</p><a class="btn" href="pedido.html#arranque">Escolher Arranque</a></div>
     </div>
 
     <div class="planos">
@@ -442,34 +451,34 @@ footer a:hover{color:var(--marfim)}
         <p class="tag">Mensal</p><h3 id="p1">Presença</h3>
         <p class="preco">75&nbsp;€<small>/mês</small></p>
         <ul class="lista"><li>1 publicação por semana</li><li>Design com a marca do seu negócio</li><li>Agendamento nas redes</li></ul>
-        <a class="btn alt" href="#contacto">Escolher Presença</a>
+        <a class="btn alt" href="pedido.html#presenca">Escolher Presença</a>
       </article>
       <article class="plano dest rv" aria-labelledby="p2">
         <p class="tag">Recomendado</p><h3 id="p2">Presença+</h3>
         <p class="preco">90&nbsp;€<small>/mês</small></p>
         <ul class="lista"><li>1 publicação por semana</li><li>Gestão da ficha Google: fotos, horários, novidades</li><li>Resposta a avaliações</li><li>Relatório mensal simples</li></ul>
-        <a class="btn" href="#contacto">Escolher Presença+</a>
+        <a class="btn" href="pedido.html#presenca-mais">Escolher Presença+</a>
       </article>
       <article class="plano rv" aria-labelledby="p3">
         <p class="tag">Mensal</p><h3 id="p3">Crescimento</h3>
         <p class="preco">150&nbsp;€<small>/mês</small></p>
         <ul class="lista"><li>2 publicações por semana, com vídeo</li><li>Tudo o que inclui o Presença+</li><li>E-mail marketing mensal</li><li>Gestão de anúncios Meta e Google</li></ul>
-        <a class="btn alt" href="#contacto">Escolher Crescimento</a>
+        <a class="btn alt" href="pedido.html#crescimento">Escolher Crescimento</a>
       </article>
     </div>
     <!-- Não indicar "com/sem IVA" até o dono confirmar. -->
     <p class="nota rv">O orçamento dos anúncios é pago por si diretamente às plataformas. Domínio e alojamento, quando necessários, ficam em seu nome e a seu cargo.</p>
 
-    <div class="extras-t rv"><h3>Extras, à medida</h3><p>Para juntar a qualquer plano, ou à parte.</p></div>
+    <div class="extras-t rv"><h3>Extras, à medida</h3><p>Para juntar a qualquer plano, ou à parte. Escolha um para o pedir.</p></div>
     <ul class="carta rv">
-      <li>Site de uma página<b>250 €</b></li>
-      <li>Site até 5 páginas<b>400 €</b></li>
-      <li>Loja online<b>desde 900 €</b></li>
-      <li>Manutenção de site<b>desde 15 €/mês</b></li>
-      <li>Kit de avaliações Google (QR)<b>30 €</b></li>
-      <li>Menu digital com QR<b>25 €</b></li>
-      <li>WhatsApp Business configurado<b>30 €</b></li>
-      <li>Newsletter mensal<b>20 €/mês</b></li>
+      <li><a href="pedido.html#site-1"><span>Site de uma página</span><b>250 €</b></a></li>
+      <li><a href="pedido.html#site-5"><span>Site até 5 páginas</span><b>400 €</b></a></li>
+      <li><a href="pedido.html#loja"><span>Loja online</span><b>desde 900 €</b></a></li>
+      <li><a href="pedido.html#manutencao"><span>Manutenção de site</span><b>desde 15 €/mês</b></a></li>
+      <li><a href="pedido.html#kit-avaliacoes"><span>Kit de avaliações Google (QR)</span><b>30 €</b></a></li>
+      <li><a href="pedido.html#menu-qr"><span>Menu digital com QR</span><b>25 €</b></a></li>
+      <li><a href="pedido.html#whatsapp"><span>WhatsApp Business configurado</span><b>30 €</b></a></li>
+      <li><a href="pedido.html#newsletter"><span>Newsletter mensal</span><b>20 €/mês</b></a></li>
     </ul>
   </div>
 </section>
@@ -539,7 +548,8 @@ footer a:hover{color:var(--marfim)}
     <p class="rot"><span class="n" aria-hidden="true"></span>Contacto</p>
     <h2 id="t-contacto">Vamos pôr o seu negócio <em>no mapa?</em></h2>
     <p class="lead">Diga-nos o nome do negócio e a localidade. Em 24 horas respondemos com o que vimos online, sem compromisso.</p>
-    <a class="email" href="mailto:ola@marketolder.pt?subject=O%20meu%20neg%C3%B3cio&amp;body=Nome%20do%20neg%C3%B3cio%3A%20%0ALocalidade%3A%20%0A">ola@marketolder.pt</a>
+    <a class="btn btn-claro" href="pedido.html">Pedir proposta <span class="seta" aria-hidden="true">→</span></a>
+    <p class="ou">ou escreva para <a class="email" href="mailto:ola@marketolder.pt">ola@marketolder.pt</a></p>
     <ul class="garantias">
       <li>Resposta em 24 horas</li>
       <li>Sem compromisso</li>

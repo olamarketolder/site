@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pedir proposta · Marketolder</title>
+<meta name="description" content="Diga-nos o que procura e o nome do seu negócio. Respondemos em 24 horas, sem compromisso.">
+<link rel="canonical" href="https://marketolder.pt/pedido.html">
+<meta name="theme-color" content="#F3EEE2">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_PT">
+<meta property="og:title" content="Pedir proposta · Marketolder">
+<meta property="og:description" content="Respondemos em 24 horas com o que vimos online, sem compromisso.">
+<meta property="og:image" content="https://marketolder.pt/assets/partilha.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/cormorant-garamond.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:500 600;font-display:swap;src:url(assets/fonts/cormorant-garamond.woff2) format("woff2")}
+@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:500;font-display:swap;src:url(assets/fonts/cormorant-garamond-italico.woff2) format("woff2")}
+@font-face{font-family:Inter;font-style:normal;font-weight:400 600;font-display:swap;src:url(assets/fonts/inter.woff2) format("woff2")}
+
+:root{
+  --verde:#1E3A2F; --marfim:#F3EEE2; --camel:#B08D57; --tinta:#1B1B18; --bordeus:#5A2330;
+  --camel-txt:#7E6034; --camel-claro:#C9AA78; --pedra-txt:#6E6A60;
+  --fio:rgba(176,141,87,.55); --linha:rgba(30,58,47,.14); --linha-v:rgba(243,238,226,.14);
+  --serif:"Cormorant Garamond",Garamond,Georgia,serif;
+  --sans:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--marfim);color:var(--tinta);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+::selection{background:var(--verde);color:var(--marfim)}
+a{color:inherit}
+svg{display:block}
+:focus-visible{outline:2px solid var(--camel);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;color:var(--verde);line-height:1.05;font-variant-numeric:lining-nums}
+em{font-style:italic;font-weight:500}
+.w{max-width:1160px;margin:0 auto;padding:0 24px;width:100%}
+.rot{font-size:12px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--camel-txt)}
+
+/* Cabeçalho */
+.cabeca{border-bottom:1px solid var(--linha)}
+.cabeca .w{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--verde)}
+.logo svg{width:34px;height:auto}
+.marca{font-family:var(--serif);font-weight:600;letter-spacing:.24em;text-transform:uppercase;font-size:17px}
+.voltar{font-size:14px;color:var(--pedra-txt);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color .2s}
+.voltar:hover{color:var(--verde)}
+
+/* Grelha */
+main{flex:1}
+.grelha{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,7vw,110px);padding-top:clamp(48px,7vw,96px);padding-bottom:clamp(72px,9vw,120px);align-items:start}
+.intro h1{font-size:clamp(42px,5.6vw,72px);margin:18px 0 18px}
+.intro .lead{font-size:clamp(17px,1.5vw,19px);color:var(--pedra-txt);max-width:28em}
+
+/* Resumo do produto escolhido */
+.resumo{margin-top:40px;background:var(--verde);color:var(--marfim);padding:30px 30px 26px;position:relative}
+.resumo::after{content:"";position:absolute;inset:8px;border:1px solid rgba(176,141,87,.5);pointer-events:none}
+.resumo .tag{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--camel-claro)}
+.resumo h2{color:var(--marfim);font-size:34px;margin:10px 0 6px}
+.resumo .preco{font-family:var(--serif);font-size:24px;color:var(--marfim);font-variant-numeric:lining-nums}
+.resumo ul{list-style:none;margin-top:18px;font-size:15px;color:rgba(243,238,226,.85)}
+.resumo li{display:flex;align-items:baseline;padding:8px 0;border-top:1px solid var(--linha-v)}
+.resumo li::before{content:"";flex:none;width:10px;height:1px;background:var(--camel);margin-right:12px;transform:translateY(-4px)}
+.resumo .ajuda{font-size:15px;color:rgba(243,238,226,.85);margin-top:12px;max-width:30em}
+.garantias{list-style:none;display:flex;flex-wrap:wrap;gap:8px 26px;margin-top:26px;font-size:14px;color:var(--pedra-txt)}
+.garantias li{display:flex;align-items:center;gap:10px}
+.garantias li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--camel)}
+
+/* Formulário */
+form{display:grid;grid-template-columns:1fr 1fr;gap:22px 20px}
+.campo{display:flex;flex-direction:column;gap:8px;min-width:0}
+.campo.todo{grid-column:1/-1}
+label{font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--verde)}
+label .op{font-weight:400;color:var(--pedra-txt);letter-spacing:0}
+input,select,textarea{font:inherit;font-size:16px;color:var(--tinta);background:#FBF8F1;border:1px solid rgba(30,58,47,.28);border-radius:0;padding:14px 16px;width:100%;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;appearance:none}
+textarea{min-height:130px;resize:vertical;line-height:1.55}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%231E3A2F' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:44px;cursor:pointer}
+input:hover,select:hover,textarea:hover{border-color:rgba(30,58,47,.5)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--verde);box-shadow:0 0 0 3px rgba(176,141,87,.28)}
+.campo.erro input,.campo.erro select{border-color:var(--bordeus)}
+.msg-erro{font-size:13px;color:var(--bordeus)}
+.mel{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.rgpd{grid-column:1/-1;font-size:13px;color:var(--pedra-txt)}
+.acoes{grid-column:1/-1;display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 34px;font:500 15px/1 var(--sans);letter-spacing:.03em;border:1px solid var(--verde);background:var(--verde);color:var(--marfim);cursor:pointer;text-decoration:none;transition:background .3s var(--ease)}
+.btn:hover{background:#142A21}
+.btn[disabled]{opacity:.7;cursor:progress}
+.btn .seta{transition:transform .3s var(--ease)}
+.btn:hover .seta{transform:translateX(4px)}
+.alt-email{font-size:14px;color:var(--pedra-txt)}
+.alt-email a{color:var(--verde)}
+.aviso-envio{grid-column:1/-1;padding:16px 18px;border:1px solid var(--bordeus);color:var(--bordeus);font-size:14px;background:rgba(90,35,48,.04)}
+.aviso-envio a{color:inherit;font-weight:600}
+
+/* Enviado */
+.enviado{text-align:center;padding:clamp(40px,6vw,72px) 24px;border:1px solid var(--linha);background:#FBF8F1}
+.enviado svg{width:110px;margin:0 auto 28px}
+.enviado h2{font-size:clamp(36px,4.4vw,52px);margin-bottom:14px}
+.enviado p{color:var(--pedra-txt);max-width:30em;margin:0 auto 32px}
+
+footer{border-top:1px solid var(--linha);font-size:14px;color:var(--pedra-txt)}
+footer .w{display:flex;justify-content:space-between;gap:10px 24px;flex-wrap:wrap;padding-top:28px;padding-bottom:28px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--verde)}
+
+@media (prefers-reduced-motion:no-preference){
+  .entra{animation:entra .9s var(--ease) both}
+  .entra.d1{animation-delay:.08s}.entra.d2{animation-delay:.16s}
+  @keyframes entra{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+}
+@media (max-width:900px){
+  .grelha{grid-template-columns:1fr}
+  .resumo{margin-top:28px}
+}
+@media (max-width:560px){
+  form{grid-template-columns:1fr}
+  .btn{width:100%}
+  .voltar .txt{display:none}
+  .voltar::after{content:"Voltar"}
+}
+@media (max-width:360px){.marca{font-size:15px;letter-spacing:.18em}.logo svg{width:28px}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="leque" viewBox="-170 -100 340 190">
+    <g stroke-width="26" stroke-linecap="round">
+      <line x1="-44.9" y1="48.1" x2="-134.8" y2="4.2" stroke="currentColor"/>
+      <line x1="-26.5" y1="27.6" x2="-79.5" y2="-57.2" stroke="currentColor"/>
+      <line x1="0" y1="20" x2="0" y2="-80" stroke="#B08D57"/>
+      <line x1="26.5" y1="27.6" x2="79.5" y2="-57.2" stroke="currentColor"/>
+      <line x1="44.9" y1="48.1" x2="134.8" y2="4.2" stroke="currentColor"/>
+    </g>
+  </symbol>
+</svg>
+
+<header class="cabeca">
+  <div class="w">
+    <a class="logo" href="./" aria-label="Marketolder, voltar ao site">
+      <svg viewBox="-170 -100 340 190" aria-hidden="true"><use href="#leque" x="-170" y="-100" width="340" height="190"/></svg>
+      <span class="marca">Marketolder</span>
+    </a>
+    <a class="voltar" href="./#servicos"><span aria-hidden="true">←</span> <span class="txt">Voltar aos serviços</span></a>
+  </div>
+</header>
+
+<main>
+  <div class="w grelha">
+    <div class="intro entra">
+      <p class="rot">Pedido de proposta</p>
+      <h1>Vamos começar <em>pelo seu negócio.</em></h1>
+      <p class="lead">Diga-nos quem é e o que procura. Em 24 horas respondemos com o que vimos online e o passo seguinte, sem compromisso.</p>
+
+      <div class="resumo" id="resumo" aria-live="polite">
+        <p class="tag" id="r-tag">A sua escolha</p>
+        <h2 id="r-nome">Ainda não sei</h2>
+        <p class="preco" id="r-preco"></p>
+        <ul id="r-itens" hidden></ul>
+        <p class="ajuda" id="r-ajuda">Sem problema. Conte-nos um pouco sobre o seu negócio e sugerimos o que faz sentido.</p>
+      </div>
+
+      <ul class="garantias">
+        <li>Resposta em 24 horas</li>
+        <li>Sem compromisso</li>
+      </ul>
+    </div>
+
+    <div class="entra d1">
+      <!--
+        Envio através do FormSubmit (formsubmit.co): não precisa de servidor.
+        No primeiro envio, o FormSubmit manda um e-mail de ativação para ola@marketolder.pt; é preciso clicar em "Activate Form" uma vez.
+      -->
+      <form id="form" action="https://formsubmit.co/ola@marketolder.pt" method="POST" novalidate>
+        <input type="hidden" name="_subject" id="assunto" value="Novo pedido pelo site">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://marketolder.pt/pedido.html#enviado">
+        <div class="mel" aria-hidden="true"><label for="_honey">Não preencher</label><input type="text" name="_honey" id="_honey" tabindex="-1" autocomplete="off"></div>
+
+        <div class="campo todo">
+          <label for="servico">Serviço</label>
+          <select id="servico" name="Serviço">
+            <optgroup label="Para começar">
+              <option value="arranque">Arranque · 100 €</option>
+            </optgroup>
+            <optgroup label="Mensalidades">
+              <option value="presenca">Presença · 75 €/mês</option>
+              <option value="presenca-mais">Presença+ · 90 €/mês</option>
+              <option value="crescimento">Crescimento · 150 €/mês</option>
+            </optgroup>
+            <optgroup label="Extras">
+              <option value="site-1">Site de uma página · 250 €</option>
+              <option value="site-5">Site até 5 páginas · 400 €</option>
+              <option value="loja">Loja online · desde 900 €</option>
+              <option value="manutencao">Manutenção de site · desde 15 €/mês</option>
+              <option value="kit-avaliacoes">Kit de avaliações Google (QR) · 30 €</option>
+              <option value="menu-qr">Menu digital com QR · 25 €</option>
+              <option value="whatsapp">WhatsApp Business configurado · 30 €</option>
+              <option value="newsletter">Newsletter mensal · 20 €/mês</option>
+            </optgroup>
+            <optgroup label="Outro">
+              <option value="duvida" selected>Ainda não sei, quero uma sugestão</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="nome">O seu nome</label>
+          <input id="nome" name="Nome" type="text" autocomplete="name" required>
+        </div>
+        <div class="campo">
+          <label for="negocio">Nome do negócio</label>
+          <input id="negocio" name="Negócio" type="text" autocomplete="organization" required>
+        </div>
+        <div class="campo">
+          <label for="localidade">Localidade</label>
+          <input id="localidade" name="Localidade" type="text" autocomplete="address-level2" required>
+        </div>
+        <div class="campo">
+          <label for="telemovel">Telemóvel <span class="op">(opcional)</span></label>
+          <input id="telemovel" name="Telemóvel" type="tel" autocomplete="tel" inputmode="tel">
+        </div>
+        <div class="campo todo">
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="campo todo">
+          <label for="mensagem">Mensagem <span class="op">(opcional)</span></label>
+          <textarea id="mensagem" name="Mensagem" placeholder="Por exemplo: tenho um café no centro e ainda não apareço no Google."></textarea>
+        </div>
+
+        <p class="aviso-envio" id="aviso" role="alert" hidden>Não foi possível enviar agora. Tente de novo dentro de momentos, ou escreva diretamente para <a href="mailto:ola@marketolder.pt">ola@marketolder.pt</a>.</p>
+        <p class="rgpd">Usamos estes dados apenas para responder ao seu pedido.</p>
+        <div class="acoes">
+          <button class="btn" type="submit" id="enviar">Enviar pedido <span class="seta" aria-hidden="true">→</span></button>
+          <span class="alt-email">ou <a href="mailto:ola@marketolder.pt">ola@marketolder.pt</a></span>
+        </div>
+      </form>
+
+      <div class="enviado" id="enviado" tabindex="-1" hidden>
+        <svg viewBox="-170 -100 340 190" aria-hidden="true" style="color:var(--verde)"><use href="#leque" x="-170" y="-100" width="340" height="190"/></svg>
+        <h2>Pedido <em>enviado.</em></h2>
+        <p id="enviado-txt">Obrigado. Respondemos em 24 horas, com o que vimos online e o passo seguinte.</p>
+        <a class="btn" href="./">Voltar ao site</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="w">
+    <span>Braga · Portugal</span>
+    <a href="mailto:ola@marketolder.pt">ola@marketolder.pt</a>
+    <span>© <span id="ano">2026</span> Marketolder</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var P={
+    'arranque':{tag:'Pagamento único',nome:'Arranque',preco:'100 €',itens:['Ficha Google criada e otimizada','Criação de redes sociais: Instagram, Facebook e TikTok','Logótipo simples','Guia de identidade visual','Primeira publicação']},
+    'presenca':{tag:'Mensalidade',nome:'Presença',preco:'75 €/mês',itens:['1 publicação por semana','Design com a marca do seu negócio','Agendamento nas redes']},
+    'presenca-mais':{tag:'Mensalidade · Recomendado',nome:'Presença+',preco:'90 €/mês',itens:['1 publicação por semana','Gestão da ficha Google: fotos, horários, novidades','Resposta a avaliações','Relatório mensal simples']},
+    'crescimento':{tag:'Mensalidade',nome:'Crescimento',preco:'150 €/mês',itens:['2 publicações por semana, com vídeo','Tudo o que inclui o Presença+','E-mail marketing mensal','Gestão de anúncios Meta e Google']},
+    'site-1':{tag:'Extra',nome:'Site de uma página',preco:'250 €'},
+    'site-5':{tag:'Extra',nome:'Site até 5 páginas',preco:'400 €'},
+    'loja':{tag:'Extra',nome:'Loja online',preco:'desde 900 €'},
+    'manutencao':{tag:'Extra',nome:'Manutenção de site',preco:'desde 15 €/mês'},
+    'kit-avaliacoes':{tag:'Extra',nome:'Kit de avaliações Google (QR)',preco:'30 €'},
+    'menu-qr':{tag:'Extra',nome:'Menu digital com QR',preco:'25 €'},
+    'whatsapp':{tag:'Extra',nome:'WhatsApp Business configurado',preco:'30 €'},
+    'newsletter':{tag:'Extra',nome:'Newsletter mensal',preco:'20 €/mês'},
+    'duvida':{tag:'A sua escolha',nome:'Ainda não sei',preco:'',ajuda:'Sem problema. Conte-nos um pouco sobre o seu negócio e sugerimos o que faz sentido.'}
+  };
+  var $=function(id){return document.getElementById(id)};
+  var sel=$('servico'), form=$('form');
+  $('ano').textContent=new Date().getFullYear();
+
+  function mostra(k){
+    var p=P[k]||P.duvida;
+    $('r-tag').textContent=p.tag; $('r-nome').textContent=p.nome; $('r-preco').textContent=p.preco;
+    var ul=$('r-itens'); ul.innerHTML='';
+    if(p.itens){p.itens.forEach(function(t){var li=document.createElement('li');li.textContent=t;ul.appendChild(li)});ul.hidden=false}else ul.hidden=true;
+    $('r-ajuda').textContent=p.ajuda||''; $('r-ajuda').hidden=!p.ajuda;
+  }
+  function doHash(){
+    var k=decodeURIComponent(location.hash.slice(1));
+    if(k==='enviado'){concluido('');return}
+    if(P[k]){sel.value=k}
+    mostra(sel.value);
+  }
+  sel.addEventListener('change',function(){mostra(sel.value);try{history.replaceState(null,'','#'+sel.value)}catch(e){}});
+  window.addEventListener('hashchange',doHash);
+  doHash();
+
+  function concluido(nome){
+    form.hidden=true; $('enviado').hidden=false;
+    if(nome) $('enviado-txt').textContent='Obrigado, '+nome+'. Respondemos em 24 horas, com o que vimos online e o passo seguinte.';
+    $('enviado').focus();
+  }
+
+  function valida(){
+    var ok=true, primeiro=null;
+    form.querySelectorAll('.campo').forEach(function(c){
+      var i=c.querySelector('input,select,textarea'); if(!i)return;
+      var m=c.querySelector('.msg-erro'); if(m)m.remove(); c.classList.remove('erro'); i.removeAttribute('aria-invalid');
+      var msg='';
+      if(i.required && !i.value.trim()) msg='Preencha este campo.';
+      else if(i.type==='email' && i.value && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(i.value.trim())) msg='Verifique o e-mail. Exemplo: nome@gmail.com';
+      if(msg){ok=false;c.classList.add('erro');i.setAttribute('aria-invalid','true');
+        var p=document.createElement('p');p.className='msg-erro';p.id=i.id+'-erro';p.textContent=msg;c.appendChild(p);i.setAttribute('aria-describedby',p.id);
+        if(!primeiro)primeiro=i}
+    });
+    if(primeiro)primeiro.focus();
+    return ok;
+  }
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    $('aviso').hidden=true;
+    if(!valida())return;
+    var p=P[sel.value]||P.duvida;
+    $('assunto').value='Pedido: '+p.nome+' · '+$('negocio').value.trim();
+    var dados={};
+    new FormData(form).forEach(function(v,k){dados[k]=v});
+    dados['Serviço']=p.nome+(p.preco?' · '+p.preco:'');
+    var b=$('enviar'); b.disabled=true; b.firstChild.textContent='A enviar… ';
+    fetch('https://formsubmit.co/ajax/ola@marketolder.pt',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(dados)})
+      .then(function(r){return r.json()})
+      .then(function(j){if(j && (j.success===true||j.success==='true'))concluido($('nome').value.trim().split(' ')[0]);else throw 0})
+      .catch(function(){$('aviso').hidden=false;$('aviso').focus&&$('aviso').scrollIntoView({block:'center'})})
+      .then(function(){b.disabled=false;b.firstChild.textContent='Enviar pedido '});
+  });
+})();
+</script>
+</body>
+</html>
