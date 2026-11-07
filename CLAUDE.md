@@ -73,7 +73,12 @@ Domínio e alojamento, quando necessários, ficam em nome e a cargo do cliente. 
 2b. **Autenticidade:** "Não há duas marcas iguais." ADN de cada negócio, três princípios (identidade antes de tendências, feito à medida, ligação verdadeira), cinco leques diferentes com o feixe camel sempre ao centro.
 3. **Serviços:** Arranque + 3 mensalidades (Presença+ destacado) + extras.
 4. **Como funciona:** Conversa e diagnóstico → Arranque → Acompanhamento (pode parar quando quiser).
-5. **Resultados em números:** **sem nomes de clientes** e **sem totais de seguidores** (são páginas pequenas). Mostrar médias que valorizam o trabalho: taxa de interação, crescimento de seguidores em %, alcance face aos seguidores. **Ainda por obter:** a secção está pronta mas escondida (`hidden`) até haver números reais.
+5. **Resultados em números:** **sem nomes de clientes** e **sem totais de seguidores**. Números reais, tirados do Meta Business Suite pelo dono a 7 nov 2026 (últimos 30 dias, 8/10–6/11/2026, 3 marcas). Mostrar a secção (retirar `hidden`) com estes três valores e esta redação:
+   - **12,6%** · "Taxa de interação média no Instagram" (média das 3 marcas: 13,9%, 4,6% e 19,2%; interações ÷ alcance).
+   - **7×** · "Alcance para lá dos seguidores, sem anúncios" (7 700 pessoas alcançadas organicamente por páginas com cerca de 1 000 seguidores).
+   - **1 € = 505 pessoas** · "Um anúncio de 18 € chegou a 9 100 pessoas" (campanha de 2 semanas, out–nov 2026).
+   - Nota pequena por baixo: "Dados reais dos últimos 30 dias das marcas que acompanhamos."
+   - **NÃO usar crescimento de seguidores** (valores fracos, +1% a +3%). Esse lugar passa a ser o "1 € = 505 pessoas".
 6. **Sobre:** marketing feito por quem o estudou a sério (licenciatura + 2 bolsas de excelência).
 7. **Contacto:** "Vamos pôr o seu negócio no mapa?" + ola@marketolder.pt (mailto). Promessa: resposta em 24 horas com o que vimos online, sem compromisso.
 8. **Rodapé:** símbolo, Braga · Portugal, e-mail, ©.
