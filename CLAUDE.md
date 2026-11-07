@@ -71,7 +71,12 @@ Domínio e alojamento, quando necessários, ficam em nome e a cargo do cliente. 
 2. **O problema:** "Se não está no Google, não existe." Mapa e confiança: fotos, horário, avaliações.
 3. **Serviços:** Arranque + 3 mensalidades (Presença+ destacado) + extras.
 4. **Como funciona:** Conversa → Arranque → Acompanhamento (pode parar quando quiser).
-5. **Resultados em números:** substitui a antiga lista de clientes. Números reais somados das páginas geridas (Aloebela, Talho Manecas, Zirra Zirra), como seguidores, alcance ou publicações. **Ainda por obter:** deixar o bloco preparado com TODO.
+5. **Resultados em números:** substitui a antiga lista de clientes (sem nomes de clientes). Números reais confirmados pelo dono a 7 nov 2026, a usar exatamente com esta redação:
+   - **3 100+** seguidores nas páginas que gerimos (Facebook + Instagram de 3 marcas). Dizer "que gerimos", nunca "que conquistámos".
+   - **9 100** pessoas alcançadas com um único anúncio de **18 €** (campanha de 2 semanas, out–nov 2026).
+   - **415** visitas à página de marcações geradas por esse anúncio.
+   - **3** marcas acompanhadas.
+   Contadores animados ao entrar no ecrã, discretos.
 6. **Sobre:** marketing feito por quem o estudou a sério (licenciatura + 2 bolsas de excelência).
 7. **Contacto:** "Vamos pôr o seu negócio no mapa?" + ola@marketolder.pt (mailto). Promessa: resposta em 24 horas com o que vimos online, sem compromisso.
 8. **Rodapé:** símbolo, Braga · Portugal, e-mail, ©.
