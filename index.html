@@ -75,7 +75,7 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 [hidden]{display:none!important}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:72px}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:140px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{font-family:var(--sans);background:var(--marfim);color:var(--tinta);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
 ::selection{background:var(--verde);color:var(--marfim)}
@@ -120,14 +120,39 @@ main > section:not([hidden]){counter-increment:sec}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--verde)}
 .logo svg{width:34px;height:auto}
 .logo .marca{font-size:17px;color:inherit}
-.menu{display:flex;gap:34px;font-size:14px;color:var(--pedra-txt)}
-.menu a{text-decoration:none;transition:color .2s}
-.menu a:hover{color:var(--verde)}
 .nav-cta{font-size:14px;font-weight:500;color:var(--verde);text-decoration:none;border-bottom:1px solid var(--camel);padding:6px 0 2px;transition:border-color .2s}
 .nav-cta:hover{border-color:var(--verde)}
 
+/* ===== Separadores ===== */
+.separadores{position:sticky;top:72px;z-index:9;background:var(--marfim);border-top:1px solid var(--linha);border-bottom:1px solid var(--linha);transition:background .4s var(--ease),box-shadow .4s var(--ease)}
+.separadores.preso{background:rgba(243,238,226,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-top-color:transparent;box-shadow:0 14px 30px -24px rgba(30,58,47,.45)}
+.separadores ol{list-style:none;position:relative;display:flex;justify-content:space-between;max-width:var(--w);margin:0 auto;padding:0 24px;counter-reset:sep}
+.separadores li{counter-increment:sep;position:relative;flex:1 1 auto}
+.separadores li + li::before{content:"";position:absolute;left:0;top:20px;bottom:20px;width:1px;background:var(--linha)}
+.separadores a{display:flex;align-items:baseline;justify-content:center;gap:9px;height:61px;padding:0 12px;text-decoration:none;white-space:nowrap;color:var(--pedra-txt);transition:color .3s var(--ease)}
+.separadores .n{font-family:var(--serif);font-size:15px;font-weight:600;color:var(--camel-txt);letter-spacing:.04em;line-height:61px}
+.separadores .n::before{content:counter(sep,upper-roman)}
+.separadores .t{font-family:var(--serif);font-size:19px;font-weight:500;line-height:61px}
+.separadores a:hover,.separadores a[aria-current="true"]{color:var(--verde)}
+.separadores a:hover .t{text-decoration:underline;text-decoration-color:var(--fio);text-underline-offset:6px;text-decoration-thickness:1px}
+.separadores a[aria-current="true"] .t{text-decoration:none;font-weight:600}
+.separadores li.indicador{counter-increment:none;position:absolute;flex:none}
+.separadores li.indicador::before{display:none}
+.indicador{position:absolute;left:0;bottom:-1px;height:2px;width:0;background:var(--camel);opacity:0;transform:translateX(0);transition:transform .55s var(--ease),width .55s var(--ease),opacity .3s}
+@media (prefers-reduced-motion:reduce){.indicador{transition:opacity .3s}}
+@media (max-width:1100px){
+  .separadores ol{justify-content:flex-start;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:0 8px;
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 24px,#000 calc(100% - 24px),transparent);mask-image:linear-gradient(90deg,transparent,#000 24px,#000 calc(100% - 24px),transparent)}
+  .separadores ol::-webkit-scrollbar{display:none}
+  .separadores li{scroll-snap-align:center;flex:none}
+  .separadores a{padding:0 18px;height:54px}
+  .separadores .n,.separadores .t{line-height:54px}
+  .separadores .t{font-size:18px}
+  html{scroll-padding-top:132px}
+}
+
 /* ===== Topo ===== */
-.topo{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 24px 96px;position:relative;overflow:hidden}
+.topo{min-height:calc(100vh - 62px);min-height:calc(100svh - 62px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 24px 72px;position:relative;overflow:hidden}
 .simbolo{position:relative;width:clamp(170px,22vw,250px);margin-bottom:22px}
 .simbolo svg{width:100%;height:auto;overflow:visible;position:relative}
 .sol-luz{position:absolute;left:50%;top:62%;width:260%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(closest-side,rgba(176,141,87,.24),rgba(176,141,87,.09) 45%,rgba(176,141,87,0));pointer-events:none}
@@ -136,7 +161,6 @@ main > section:not([hidden]){counter-increment:sec}
 .topo h1{max-width:12ch;margin:0 auto}
 .topo .lead{margin:28px auto 42px}
 .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.desce{position:absolute;bottom:28px;left:50%;width:1px;height:54px;background:linear-gradient(var(--fio),transparent);transform:translateX(-50%)}
 
 /* Coreografia do leque: o feixe central dispara, os outros abrem-se um a um, nasce o brilho, o nome fecha */
 @media (prefers-reduced-motion:no-preference){
@@ -149,12 +173,13 @@ main > section:not([hidden]){counter-increment:sec}
   .js .topo h1.sobe{animation-delay:.7s}
   .js .topo .lead.sobe{animation-delay:.95s}
   .js .topo .ctas.sobe{animation-delay:1.15s}
-  .js .desce{animation:sobe 1s 2s var(--ease) both}
+  .js .separadores{animation:aparece 1s 1.5s var(--ease) both}
 }
 @keyframes nascer{from{opacity:0;transform:translate(-50%,-38%) scale(.35)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}
 @keyframes disparo{0%{stroke-dashoffset:100;opacity:0}12%{opacity:1}100%{stroke-dashoffset:0;opacity:1}}
 @keyframes abrir{0%{transform:rotate(0deg);opacity:0}15%{opacity:1}100%{transform:rotate(var(--a));opacity:1}}
 @keyframes fechar{from{letter-spacing:1.1em;text-indent:1.1em;opacity:0}to{letter-spacing:.42em;text-indent:.42em;opacity:1}}
+@keyframes aparece{from{opacity:0}to{opacity:1}}
 @keyframes sobe{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 
 /* ===== Secções ===== */
@@ -333,7 +358,6 @@ footer a:hover{color:var(--marfim)}
 @media (max-width:900px){
   .aut-topo{grid-template-columns:1fr;gap:36px}
   .principios{grid-template-columns:1fr;gap:36px}
-  .menu{display:none}
   .prob{grid-template-columns:1fr}
   .mapa{justify-self:stretch;max-width:none;aspect-ratio:4/4.4}
   .pino,.onda{top:26%}
@@ -392,12 +416,6 @@ footer a:hover{color:var(--marfim)}
       <svg viewBox="-170 -100 340 190" aria-hidden="true"><use href="#leque" x="-170" y="-100" width="340" height="190"/></svg>
       <span class="marca">Marketolder</span>
     </a>
-    <div class="menu">
-      <a href="#autenticidade">Autenticidade</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#como">Como funciona</a>
-      <a href="#sobre">Sobre</a>
-    </div>
     <a class="nav-cta" href="pedido.html">Falar connosco</a>
   </div>
 </nav>
@@ -422,8 +440,21 @@ footer a:hover{color:var(--marfim)}
     <a class="btn" href="pedido.html#arranque">Começar por 100 € <span class="seta" aria-hidden="true">→</span></a>
     <a class="btn alt" href="#servicos">Ver serviços</a>
   </div>
-  <span class="desce" aria-hidden="true"></span>
 </header>
+
+<!-- Separadores: entre o topo e a primeira secção; ao descer, ficam presos por baixo do cabeçalho -->
+<nav class="separadores" id="separadores" aria-label="Secções da página">
+  <ol>
+    <li><a href="#problema"><span class="n" aria-hidden="true"></span><span class="t">O problema</span></a></li>
+    <li><a href="#autenticidade"><span class="n" aria-hidden="true"></span><span class="t">Autenticidade</span></a></li>
+    <li><a href="#servicos"><span class="n" aria-hidden="true"></span><span class="t">Serviços</span></a></li>
+    <li><a href="#como"><span class="n" aria-hidden="true"></span><span class="t">Como funciona</span></a></li>
+    <li><a href="#resultados"><span class="n" aria-hidden="true"></span><span class="t">Resultados</span></a></li>
+    <li><a href="#sobre"><span class="n" aria-hidden="true"></span><span class="t">Sobre</span></a></li>
+    <li><a href="#contacto"><span class="n" aria-hidden="true"></span><span class="t">Contacto</span></a></li>
+    <li class="indicador" aria-hidden="true"></li>
+  </ol>
+</nav>
 
 <main id="conteudo">
 
@@ -651,6 +682,32 @@ footer a:hover{color:var(--marfim)}
   if(!('IntersectionObserver' in window)){for(var i=0;i<els.length;i++)els[i].classList.add('in');return}
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.12});
   els.forEach(function(e){io.observe(e)});
+
+  /* Separadores: esconder os de secções escondidas, marcar a secção atual, prender ao descer */
+  var sep=document.getElementById('separadores'), ol=sep.querySelector('ol'), ind=sep.querySelector('.indicador');
+  var links=[].slice.call(sep.querySelectorAll('li:not(.indicador) a')), atual=null;
+  links.forEach(function(a){var sec=document.querySelector(a.hash);if(!sec||sec.hidden)a.parentNode.hidden=true});
+  function poe(a){
+    if(!a){ind.style.opacity=0;return}
+    ind.style.width=a.offsetWidth+'px';ind.style.transform='translateX('+a.parentNode.offsetLeft+'px)';ind.style.opacity=1;
+  }
+  function ativa(a){
+    if(a===atual)return; if(atual)atual.removeAttribute('aria-current'); atual=a;
+    if(a){a.setAttribute('aria-current','true');
+      if(ol.scrollWidth>ol.clientWidth)ol.scrollTo({left:a.parentNode.offsetLeft-(ol.clientWidth-a.offsetWidth)/2,behavior:'smooth'});}
+    poe(a);
+  }
+  var secs=links.map(function(a){return document.querySelector(a.hash)}).filter(function(x){return x&&!x.hidden});
+  function verifica(){
+    var linha=window.innerHeight*0.4, ativo=null;
+    secs.forEach(function(sc){var r=sc.getBoundingClientRect();if(r.top<=linha&&r.bottom>linha)ativo=sc});
+    ativa(ativo?sep.querySelector('a[href="#'+ativo.id+'"]'):null);
+    sep.classList.toggle('preso',sep.getBoundingClientRect().top<=73);
+  }
+  var pendente=false;
+  window.addEventListener('scroll',function(){if(!pendente){pendente=true;requestAnimationFrame(function(){pendente=false;verifica()})}},{passive:true});
+  window.addEventListener('resize',function(){poe(atual)});
+  verifica();
 })();
 </script>
 </body>
