@@ -79,8 +79,8 @@ O site tem várias páginas (decisão do dono): `index.html` (página inicial, c
 5. **Resultados em números:** **sem nomes de clientes** e **sem totais de seguidores**. Números reais, tirados do Meta Business Suite pelo dono a 7 nov 2026 (últimos 30 dias, 8/10–6/11/2026, 3 marcas). Mostrar a secção (retirar `hidden`) com estes três valores e esta redação:
    - **12,6%** · "Taxa de interação média no Instagram" (média das 3 marcas: 13,9%, 4,6% e 19,2%; interações ÷ alcance).
    - **7×** · "Alcance para lá dos seguidores, sem anúncios" (7 700 pessoas alcançadas organicamente por páginas com cerca de 1 000 seguidores).
-   - **1 € = 505 pessoas** · "Um anúncio de 18 € chegou a 9 100 pessoas" (campanha de 2 semanas, out–nov 2026).
-   - Nota pequena por baixo: "Dados reais dos últimos 30 dias das marcas que acompanhamos."
+   - **1 € = 505 pessoas** · "Por cada euro investido em anúncios pagos". **Não detalhar a campanha** (nada de "um anúncio de 18 € chegou a 9 100 pessoas"): indicação do dono, porque há campanhas com resultados diferentes. Origem interna: anúncio de 18 € com 9 100 pessoas alcançadas, out–nov 2026.
+   - Reforçar que são números reais (indicação do dono): selo "Dados reais" e nota "Últimos 30 dias das marcas que acompanhamos, retirados do Meta Business Suite."
    - **NÃO usar crescimento de seguidores** (valores fracos, +1% a +3%). Esse lugar passa a ser o "1 € = 505 pessoas".
 6. **Sobre:** marketing feito por quem o estudou a sério (licenciatura, prémios de mérito como melhor aluno, mais de 200 horas de formação em marketing digital).
 7. **Contacto:** "Vamos pôr o seu negócio no mapa?" + botão para o formulário (`pedido.html`), ola@marketolder.pt, telefone **+351 913 499 910** e WhatsApp (mesmo número; por agora é o número pessoal do dono, que o pode trocar mais tarde por um número da empresa). Promessa: resposta em 24 horas com o que vimos online, sem compromisso.
