@@ -77,7 +77,7 @@ O site tem várias páginas (decisão do dono): `index.html` (página inicial, c
 3. **Serviços:** Arranque + 3 mensalidades (Presença+ destacado) + extras.
 4. **Como funciona:** Conversa e diagnóstico → Arranque → Acompanhamento (pode parar quando quiser).
 5. **Resultados em números:** **sem nomes de clientes** e **sem totais de seguidores**. Números reais, tirados do Meta Business Suite pelo dono a 7 nov 2026 (últimos 30 dias, 8/10–6/11/2026, 3 marcas). Mostrar a secção (retirar `hidden`) com estes três valores e esta redação:
-   - **12,6%** · "Taxa de interação média no Instagram" (média das 3 marcas: 13,9%, 4,6% e 19,2%; interações ÷ alcance).
+   - **12,6%** · "Taxa de interação média nas redes sociais" (redação pedida pelo dono) (média das 3 marcas: 13,9%, 4,6% e 19,2%; interações ÷ alcance).
    - **7×** · "Alcance para lá dos seguidores, sem anúncios" (7 700 pessoas alcançadas organicamente por páginas com cerca de 1 000 seguidores).
    - **1 € = 505 pessoas** · "Por cada euro investido em anúncios pagos". **Não detalhar a campanha** (nada de "um anúncio de 18 € chegou a 9 100 pessoas"): indicação do dono, porque há campanhas com resultados diferentes. Origem interna: anúncio de 18 € com 9 100 pessoas alcançadas, out–nov 2026.
    - Reforçar que são números reais (indicação do dono): selo "Dados reais" e nota "Últimos 30 dias das marcas que acompanhamos, retirados do Meta Business Suite."
