@@ -65,3 +65,18 @@
   },{threshold:.4});
   io.observe(alvo);
 })();
+
+/* Telefone no computador: em vez de tentar ligar, mostra o número e permite copiá-lo */
+(function(){
+  var tel=document.querySelector('.canal[href^="tel:"]'), caixa=document.getElementById('canal-num');
+  if(!tel||!caixa)return;
+  var semToque=window.matchMedia&&window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if(!semToque)return;
+  tel.addEventListener('click',function(e){e.preventDefault();caixa.hidden=!caixa.hidden});
+  var b=caixa.querySelector('.copiar'), num=caixa.querySelector('span');
+  b.addEventListener('click',function(){
+    var ok=function(){b.textContent='Copiado';setTimeout(function(){b.textContent='Copiar'},1800)};
+    var sel=function(){var r=document.createRange();r.selectNodeContents(num);var s=window.getSelection();s.removeAllRanges();s.addRange(r)};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText('+351913499910').then(ok,sel)}else sel();
+  });
+})();

@@ -424,3 +424,6 @@ footer a:hover{color:var(--marfim)}
 .canal{width:56px;height:56px;border-radius:50%;border:1px solid var(--camel);display:grid;place-items:center;color:var(--marfim);text-decoration:none;transition:background .3s var(--ease),color .3s var(--ease),transform .3s var(--ease)}
 .canal:hover{background:var(--camel);color:var(--verde);transform:translateY(-2px)}
 .canal svg{width:24px;height:24px}
+.canal-num{margin-top:18px;display:flex;justify-content:center;align-items:center;gap:14px;font-family:var(--serif);font-size:26px;color:var(--marfim);font-variant-numeric:lining-nums;letter-spacing:.02em}
+.canal-num .copiar{font:500 12px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--camel-claro);background:none;border:1px solid var(--camel);padding:7px 12px;cursor:pointer;transition:background .2s,color .2s}
+.canal-num .copiar:hover{background:var(--camel);color:var(--verde)}
