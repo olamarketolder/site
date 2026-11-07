@@ -65,9 +65,12 @@ O fundador é licenciado em Marketing, recebeu **prémios de mérito como melhor
 - WhatsApp Business configurado: 30 €
 - Newsletter mensal: 20 €/mês
 
-Domínio e alojamento, quando necessários, ficam em nome e a cargo do cliente. Não indicar "com/sem IVA" até o dono confirmar.
+Domínio e alojamento, quando necessários, ficam em nome e a cargo do cliente. **IVA:** decisão do dono (7 nov 2026): manter os preços como estão, sem referência ao IVA.
 
-## Estrutura sugerida (página única, com âncoras)
+## Estrutura
+O site tem várias páginas (decisão do dono): `index.html` (página inicial, com todas as secções abaixo em versão resumida e ligações "Saber mais"), `abordagem.html`, `servicos.html`, `sobre.html` e `pedido.html` (contacto: formulário). Os separadores por baixo do topo são o menu do site, iguais em todas as páginas. Estilos e código partilhados em `assets/estilo.css` e `assets/site.js`; `tools/paginas.py` gera as páginas interiores.
+
+### Secções da página inicial
 1. **Topo:** símbolo animado + "O seu negócio, encontrado." + subtítulo + botões "Começar por 100 €" e "Ver serviços".
 2. **O problema:** "Se não está no Google, não existe." Mapa e confiança: fotos, horário, avaliações.
 2b. **Autenticidade:** "Não há duas marcas iguais." ADN de cada negócio, três princípios (identidade antes de tendências, feito à medida, ligação verdadeira), cinco leques diferentes com o feixe camel sempre ao centro.
@@ -79,9 +82,9 @@ Domínio e alojamento, quando necessários, ficam em nome e a cargo do cliente. 
    - **1 € = 505 pessoas** · "Um anúncio de 18 € chegou a 9 100 pessoas" (campanha de 2 semanas, out–nov 2026).
    - Nota pequena por baixo: "Dados reais dos últimos 30 dias das marcas que acompanhamos."
    - **NÃO usar crescimento de seguidores** (valores fracos, +1% a +3%). Esse lugar passa a ser o "1 € = 505 pessoas".
-6. **Sobre:** marketing feito por quem o estudou a sério (licenciatura + 2 bolsas de excelência).
-7. **Contacto:** "Vamos pôr o seu negócio no mapa?" + ola@marketolder.pt (mailto). Promessa: resposta em 24 horas com o que vimos online, sem compromisso.
-8. **Rodapé:** símbolo, Braga · Portugal, e-mail, ©.
+6. **Sobre:** marketing feito por quem o estudou a sério (licenciatura, prémios de mérito como melhor aluno, mais de 200 horas de formação em marketing digital).
+7. **Contacto:** "Vamos pôr o seu negócio no mapa?" + botão para o formulário (`pedido.html`), ola@marketolder.pt, telefone **+351 913 499 910** e WhatsApp (mesmo número; por agora é o número pessoal do dono, que o pode trocar mais tarde por um número da empresa). Promessa: resposta em 24 horas com o que vimos online, sem compromisso.
+8. **Rodapé:** símbolo, Braga · Portugal, e-mail, telefone, WhatsApp, ©.
 
 ## Fator "uau" (prioridade)
 - **Animação do leque no topo:** o feixe central dourado dispara primeiro, os outros abrem-se em leque um a um com ligeiro "overshoot", e um brilho camel suave cresce por trás, como um nascer do sol. Depois, o nome surge com o espaçamento das letras a fechar.
