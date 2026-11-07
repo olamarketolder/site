@@ -63,6 +63,9 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--verde);b
 .alt-email a{color:var(--verde)}
 .aviso-envio{grid-column:1/-1;padding:16px 18px;border:1px solid var(--bordeus);color:var(--bordeus);font-size:14px;background:rgba(90,35,48,.04)}
 .aviso-envio a{color:inherit;font-weight:600}
+.aviso-envio p{margin-bottom:14px}
+.aviso-envio .btn-wa{background:var(--verde);border-color:var(--verde);color:var(--marfim);font-weight:500;min-height:48px;padding:0 22px}
+.aviso-envio .btn-wa:hover{background:#142A21}
 
 /* Enviado */
 .enviado{text-align:center;padding:clamp(40px,6vw,72px) 24px;border:1px solid var(--linha);background:#FBF8F1}
@@ -207,7 +210,10 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--verde);b
           <textarea id="mensagem" name="Mensagem" placeholder="Por exemplo: tenho um café no centro e ainda não apareço no Google."></textarea>
         </div>
 
-        <p class="aviso-envio" id="aviso" role="alert" hidden>Não foi possível enviar agora. Tente de novo dentro de momentos, ou escreva diretamente para <a href="mailto:ola@marketolder.pt">ola@marketolder.pt</a>. Também pode ligar para <a href="tel:+351913499910">+351 913 499 910</a> ou falar no <a href="https://wa.me/351913499910?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Marketolder." target="_blank" rel="noopener">WhatsApp</a>.</p>
+        <div class="aviso-envio" id="aviso" role="alert" tabindex="-1" hidden>
+          <p><strong>O envio automático está indisponível neste momento.</strong> O seu pedido não se perde: envie-o já pelo WhatsApp, com tudo preenchido, ou escreva para <a href="mailto:ola@marketolder.pt">ola@marketolder.pt</a>.</p>
+          <a class="btn btn-wa" id="aviso-wa" href="https://wa.me/351913499910" target="_blank" rel="noopener">Enviar este pedido pelo WhatsApp <span class="seta" aria-hidden="true">→</span></a>
+        </div>
         <p class="rgpd">Usamos estes dados apenas para responder ao seu pedido.</p>
         <div class="acoes">
           <button class="btn" type="submit" id="enviar">Enviar pedido <span class="seta" aria-hidden="true">→</span></button>
@@ -243,6 +249,9 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--verde);b
 
 <script>
 (function(){
+  /* Chave pública do Web3Forms (web3forms.com). Vazio = usa o FormSubmit. */
+  var WEB3FORMS_CHAVE='';
+
   var P={
     'arranque':{tag:'Pagamento único',nome:'Arranque',preco:'100 €',itens:['Ficha Google criada e otimizada','Criação de redes sociais: Instagram, Facebook e TikTok','Logótipo','Animação do logótipo','Guia de identidade visual','Primeira publicação']},
     'presenca':{tag:'Mensalidade',nome:'Presença',preco:'75 €/mês',itens:['1 publicação por semana','Design com a marca do seu negócio','Agendamento nas redes']},
@@ -310,23 +319,34 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--verde);b
     new FormData(form).forEach(function(v,k){dados[k]=v});
     dados['Serviço']=p.nome+(p.preco?' · '+p.preco:'');
     var b=$('enviar'); b.disabled=true; b.firstChild.textContent='A enviar… ';
-    /* Plano B: se o envio rápido falhar (formulário por ativar, rede, bloqueio), envia pelo método
-       normal do FormSubmit, que abre a página dele e volta a este site já com "Pedido enviado". */
-    var normal=function(){
-      var h=document.createElement('input');h.type='hidden';h.name='Serviço';h.value=dados['Serviço'];
-      sel.removeAttribute('name');form.appendChild(h);
-      HTMLFormElement.prototype.submit.call(form);
+    var repor=function(){b.disabled=false;b.firstChild.textContent='Enviar pedido '};
+    var falhou=function(motivo){
+      if(window.console)console.warn('Envio do formulário falhou:',motivo);
+      var t='Olá! Vim pelo site da Marketolder.\n\nServiço: '+dados['Serviço']+'\nNome: '+dados['Nome']+'\nNegócio: '+dados['Negócio']+'\nLocalidade: '+dados['Localidade']+
+            (dados['Telemóvel']?'\nTelemóvel: '+dados['Telemóvel']:'')+'\nE-mail: '+dados['email']+(dados['Mensagem']?'\n\n'+dados['Mensagem']:'');
+      $('aviso-wa').href='https://wa.me/351913499910?text='+encodeURIComponent(t);
+      $('aviso').hidden=false; $('aviso').scrollIntoView({block:'center'}); $('aviso').focus(); repor();
     };
-    fetch('https://formsubmit.co/ajax/ola@marketolder.pt',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(dados)})
+    /* Envio: Web3Forms quando houver chave; até lá, FormSubmit. Limite de 10 segundos. */
+    var pedido;
+    if(WEB3FORMS_CHAVE){
+      var w={access_key:WEB3FORMS_CHAVE,subject:$('assunto').value,from_name:'Site Marketolder',replyto:dados['email'],botcheck:''};
+      Object.keys(dados).forEach(function(k){if(k.charAt(0)!=='_')w[k]=dados[k]});
+      pedido={url:'https://api.web3forms.com/submit',corpo:w};
+    } else {
+      pedido={url:'https://formsubmit.co/ajax/ola@marketolder.pt',corpo:dados};
+    }
+    if(dados['_honey']){concluido('');repor();return}
+    var ctl=window.AbortController?new AbortController():null;
+    var limite=setTimeout(function(){if(ctl)ctl.abort()},10000);
+    fetch(pedido.url,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(pedido.corpo),signal:ctl?ctl.signal:undefined})
       .then(function(r){return r.json()})
       .then(function(j){
-        if(j && (j.success===true||j.success==='true')){concluido($('nome').value.trim().split(' ')[0]);b.disabled=false;b.firstChild.textContent='Enviar pedido ';return}
-        if(window.console)console.warn('FormSubmit:',j&&j.message);
-        normal();
+        clearTimeout(limite);
+        if(j && (j.success===true||j.success==='true')){concluido($('nome').value.trim().split(' ')[0]);repor()}
+        else falhou(j&&j.message);
       })
-      .catch(function(){
-        try{normal()}catch(e){$('aviso').hidden=false;$('aviso').scrollIntoView({block:'center'});b.disabled=false;b.firstChild.textContent='Enviar pedido '}
-      });
+      .catch(function(e){clearTimeout(limite);falhou(e&&e.name)});
   });
 })();
 </script>
