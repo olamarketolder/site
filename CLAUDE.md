@@ -13,6 +13,7 @@ Este repositório é o site da **Marketolder**, uma marca de serviços de market
 - **Nome:** Marketolder (escreve-se assim, sem H). No logótipo, em maiúsculas espaçadas: MARKETOLDER.
 - **Assinatura:** "Marketing para pequenos negócios"
 - **Promessa:** "Pomos o seu negócio onde os clientes o procuram."
+- **Posicionamento (indicação do dono):** **autenticidade**. Não somos "virais" nem caçadores de tendências: cada marca é única, tem o seu ADN, e o nosso trabalho é trabalhar a sua identidade e promover a sua autenticidade, porque é isso que liga as pessoas às marcas.
 - **Personalidade:** sóbria, competente, próxima, sólida. Estilo **Old Money**: elegância discreta, nada de espalhafato, nada de "growth hacking", nada de emojis.
 
 ### Símbolo: "o leque"
@@ -44,10 +45,10 @@ Fala como um bom alfaiate: sabe muito, explica pouco e com precisão. Diretos, c
 Donos de pequenos negócios locais (cafés, restaurantes, cabeleireiros, oficinas, clínicas, lojas), sobretudo na zona de Braga, com presença digital fraca ou inexistente. Visitam o site no **telemóvel**. Não são técnicos: tudo tem de ser claro em segundos.
 
 ## Argumento de credibilidade
-O fundador é licenciado em Marketing e recebeu **duas bolsas de excelência como melhor aluno do curso**. Usar numa secção "Sobre" curta, sem nome nem fotografia.
+O fundador é licenciado em Marketing, recebeu **prémios de mérito como melhor aluno do curso** e tem **mais de 200 horas de formação em marketing digital**. Usar numa secção "Sobre" curta, sem nome nem fotografia. (Indicação do dono: não falar em "duas bolsas de excelência".)
 
 ## Preços (definidos pelo dono, usar exatamente estes)
-**Arranque, pagamento único, 100 €:** ficha Google criada e otimizada, Instagram e Facebook, logótipo simples, primeira publicação.
+**Arranque, pagamento único, 100 €:** ficha Google criada e otimizada, criação de redes sociais (Instagram, Facebook e TikTok), logótipo, animação do logótipo, guia de identidade visual, primeira publicação.
 
 **Mensalidades**
 - **Presença, 75 €/mês:** 1 publicação por semana, design com a marca do cliente, agendamento nas redes.
@@ -64,22 +65,26 @@ O fundador é licenciado em Marketing e recebeu **duas bolsas de excelência com
 - WhatsApp Business configurado: 30 €
 - Newsletter mensal: 20 €/mês
 
-Domínio e alojamento, quando necessários, ficam em nome e a cargo do cliente. Não indicar "com/sem IVA" até o dono confirmar.
+Domínio e alojamento, quando necessários, ficam em nome e a cargo do cliente. **IVA:** decisão do dono (7 nov 2026): manter os preços como estão, sem referência ao IVA.
 
-## Estrutura sugerida (página única, com âncoras)
+## Estrutura
+O site tem várias páginas (decisão do dono): `index.html` (página inicial, com todas as secções abaixo em versão resumida e ligações "Saber mais"), `abordagem.html`, `servicos.html`, `sobre.html` e `pedido.html` (contacto: formulário). Os separadores por baixo do topo são o menu do site, iguais em todas as páginas. Estilos e código partilhados em `assets/estilo.css` e `assets/site.js`; `tools/paginas.py` gera as páginas interiores.
+
+### Secções da página inicial
 1. **Topo:** símbolo animado + "O seu negócio, encontrado." + subtítulo + botões "Começar por 100 €" e "Ver serviços".
 2. **O problema:** "Se não está no Google, não existe." Mapa e confiança: fotos, horário, avaliações.
+2b. **Autenticidade:** "Não há duas marcas iguais." ADN de cada negócio, três princípios (identidade antes de tendências, feito à medida, ligação verdadeira), cinco leques diferentes com o feixe camel sempre ao centro.
 3. **Serviços:** Arranque + 3 mensalidades (Presença+ destacado) + extras.
-4. **Como funciona:** Conversa → Arranque → Acompanhamento (pode parar quando quiser).
-5. **Resultados em números:** substitui a antiga lista de clientes (sem nomes de clientes). Números reais confirmados pelo dono a 7 nov 2026, a usar exatamente com esta redação:
-   - Título forte: **"1 € = 505 pessoas"**. Um anúncio de 18 € alcançou 9 100 pessoas (campanha de 2 semanas, out–nov 2026).
-   - **4 cêntimos por visita**: o mesmo anúncio levou 415 pessoas à página de marcações do cliente.
-   - **3 setores, 3 marcas**: estética, talho, festa popular (mostra versatilidade).
-   - **NÃO usar número de seguidores**: o dono considera esses valores fracos para comunicar. Comunicar eficiência (o que rende cada euro), não volume.
-   Contadores animados ao entrar no ecrã, discretos.
-6. **Sobre:** marketing feito por quem o estudou a sério (licenciatura + 2 bolsas de excelência).
-7. **Contacto:** "Vamos pôr o seu negócio no mapa?" + ola@marketolder.pt (mailto). Promessa: resposta em 24 horas com o que vimos online, sem compromisso.
-8. **Rodapé:** símbolo, Braga · Portugal, e-mail, ©.
+4. **Como funciona:** Conversa e diagnóstico → Arranque → Acompanhamento (pode parar quando quiser).
+5. **Resultados em números:** **sem nomes de clientes** e **sem totais de seguidores**. Números reais, tirados do Meta Business Suite pelo dono a 7 nov 2026 (últimos 30 dias, 8/10–6/11/2026, 3 marcas). Mostrar a secção (retirar `hidden`) com estes três valores e esta redação:
+   - **12,6%** · "Taxa de interação média nas redes sociais" (redação pedida pelo dono) (média das 3 marcas: 13,9%, 4,6% e 19,2%; interações ÷ alcance).
+   - **7×** · "Alcance para lá dos seguidores, sem anúncios" (7 700 pessoas alcançadas organicamente por páginas com cerca de 1 000 seguidores).
+   - **1 € = 505 pessoas** · "Por cada euro investido em anúncios pagos". **Não detalhar a campanha** (nada de "um anúncio de 18 € chegou a 9 100 pessoas"): indicação do dono, porque há campanhas com resultados diferentes. Origem interna: anúncio de 18 € com 9 100 pessoas alcançadas, out–nov 2026.
+   - Reforçar que são números reais (indicação do dono): selo "Dados reais" e nota "Últimos 30 dias das marcas que acompanhamos, retirados do Meta Business Suite."
+   - **NÃO usar crescimento de seguidores** (valores fracos, +1% a +3%). Esse lugar passa a ser o "1 € = 505 pessoas".
+6. **Sobre:** marketing feito por quem o estudou a sério (licenciatura, prémios de mérito como melhor aluno, mais de 200 horas de formação em marketing digital).
+7. **Contacto:** "Vamos pôr o seu negócio no mapa?" + botão para o formulário (`pedido.html`), ola@marketolder.pt, telefone **+351 913 499 910** e WhatsApp (mesmo número; por agora é o número pessoal do dono, que o pode trocar mais tarde por um número da empresa). Promessa: resposta em 24 horas com o que vimos online, sem compromisso.
+8. **Rodapé:** símbolo, Braga · Portugal, e-mail, telefone, WhatsApp, ©.
 
 ## Fator "uau" (prioridade)
 - **Animação do leque no topo:** o feixe central dourado dispara primeiro, os outros abrem-se em leque um a um com ligeiro "overshoot", e um brilho camel suave cresce por trás, como um nascer do sol. Depois, o nome surge com o espaçamento das letras a fechar.

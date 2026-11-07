@@ -1,0 +1,4 @@
+Fontes alojadas neste site, ambas sob a SIL Open Font License 1.1 (https://openfontlicense.org):
+- Cormorant Garamond, de Christian Thalmann (Catharsis Fonts)
+- Inter, de Rasmus Andersson
+Ficheiros obtidos do Google Fonts (subconjunto latino, fontes variáveis).

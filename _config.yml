@@ -1,0 +1,5 @@
+# GitHub Pages: ficheiros do repositório que NÃO devem ser publicados no site
+exclude:
+  - CLAUDE.md
+  - tools
+  - .gitignore
