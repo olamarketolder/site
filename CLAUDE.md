@@ -72,10 +72,10 @@ Domínio e alojamento, quando necessários, ficam em nome e a cargo do cliente. 
 3. **Serviços:** Arranque + 3 mensalidades (Presença+ destacado) + extras.
 4. **Como funciona:** Conversa → Arranque → Acompanhamento (pode parar quando quiser).
 5. **Resultados em números:** substitui a antiga lista de clientes (sem nomes de clientes). Números reais confirmados pelo dono a 7 nov 2026, a usar exatamente com esta redação:
-   - **3 100+** seguidores nas páginas que gerimos (Facebook + Instagram de 3 marcas). Dizer "que gerimos", nunca "que conquistámos".
-   - **9 100** pessoas alcançadas com um único anúncio de **18 €** (campanha de 2 semanas, out–nov 2026).
-   - **415** visitas à página de marcações geradas por esse anúncio.
-   - **3** marcas acompanhadas.
+   - Título forte: **"1 € = 505 pessoas"**. Um anúncio de 18 € alcançou 9 100 pessoas (campanha de 2 semanas, out–nov 2026).
+   - **4 cêntimos por visita**: o mesmo anúncio levou 415 pessoas à página de marcações do cliente.
+   - **3 setores, 3 marcas**: estética, talho, festa popular (mostra versatilidade).
+   - **NÃO usar número de seguidores**: o dono considera esses valores fracos para comunicar. Comunicar eficiência (o que rende cada euro), não volume.
    Contadores animados ao entrar no ecrã, discretos.
 6. **Sobre:** marketing feito por quem o estudou a sério (licenciatura + 2 bolsas de excelência).
 7. **Contacto:** "Vamos pôr o seu negócio no mapa?" + ola@marketolder.pt (mailto). Promessa: resposta em 24 horas com o que vimos online, sem compromisso.
