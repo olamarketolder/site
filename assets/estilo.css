@@ -418,3 +418,9 @@ footer a:hover{color:var(--marfim)}
 
 /* Coroa de louros (prémios de mérito) */
 .selo .anel svg.louro{width:60px}
+
+/* Contacto: ligar e WhatsApp em ícones */
+.canais{display:flex;justify-content:center;gap:16px;margin-top:26px}
+.canal{width:56px;height:56px;border-radius:50%;border:1px solid var(--camel);display:grid;place-items:center;color:var(--marfim);text-decoration:none;transition:background .3s var(--ease),color .3s var(--ease),transform .3s var(--ease)}
+.canal:hover{background:var(--camel);color:var(--verde);transform:translateY(-2px)}
+.canal svg{width:24px;height:24px}
