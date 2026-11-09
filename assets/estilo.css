@@ -427,3 +427,24 @@ footer a:hover{color:var(--marfim)}
 .canal-num{margin-top:18px;display:flex;justify-content:center;align-items:center;gap:14px;font-family:var(--serif);font-size:26px;color:var(--marfim);font-variant-numeric:lining-nums;letter-spacing:.02em}
 .canal-num .copiar{font:500 12px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--camel-claro);background:none;border:1px solid var(--camel);padding:7px 12px;cursor:pointer;transition:background .2s,color .2s}
 .canal-num .copiar:hover{background:var(--camel);color:var(--verde)}
+
+/* Instagram: últimas publicações (Behold) */
+.instagram + #sobre{border-top:1px solid var(--fio)}
+.ig-topo{display:flex;justify-content:space-between;align-items:flex-end;gap:24px 40px;flex-wrap:wrap;margin-bottom:clamp(40px,5vw,64px)}
+.ig-topo .cab{margin-bottom:0}
+.ig-seguir{gap:12px}
+.ig-seguir svg{width:18px;height:18px;flex:none}
+.ig-grelha{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(8px,1.4vw,18px)}
+.ig-grelha li{position:relative;aspect-ratio:1;background:rgba(30,58,47,.06);overflow:hidden}
+.ig-vazio{animation:ig-pulsa 1.6s ease-in-out infinite alternate}
+@keyframes ig-pulsa{from{opacity:.55}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.ig-vazio{animation:none}}
+.ig-grelha a{position:absolute;inset:0;display:block}
+.ig-grelha img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .9s var(--ease)}
+.ig-grelha a::after{content:"";position:absolute;inset:10px;border:1px solid rgba(243,238,226,.85);opacity:0;transition:opacity .4s var(--ease)}
+.ig-grelha a:hover img,.ig-grelha a:focus-visible img{transform:scale(1.04)}
+.ig-grelha a:hover::after,.ig-grelha a:focus-visible::after{opacity:1}
+.ig-video{position:absolute;top:12px;right:12px;width:26px;height:26px;border-radius:50%;background:rgba(27,27,24,.55);display:grid;place-items:center}
+.ig-video::before{content:"";margin-left:2px;border-left:8px solid var(--marfim);border-top:5px solid transparent;border-bottom:5px solid transparent}
+.instagram.ig-sem-feed .ig-grelha{display:none}
+@media (max-width:640px){.ig-grelha{grid-template-columns:repeat(2,minmax(0,1fr))}.ig-seguir{width:100%}}
