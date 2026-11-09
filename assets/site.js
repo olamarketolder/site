@@ -80,3 +80,41 @@
     if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText('+351913499910').then(ok,sel)}else sel();
   });
 })();
+
+/* Instagram: últimas publicações a partir do feed JSON do Behold (data-feed na secção #instagram) */
+(function(){
+  var sec=document.getElementById('instagram');
+  if(!sec||sec.hidden)return;
+  var feed=sec.getAttribute('data-feed'), conta=(sec.getAttribute('data-conta')||'').replace(/^@/,'');
+  var seguir=sec.querySelector('.ig-seguir');
+  if(conta){seguir.href='https://www.instagram.com/'+encodeURIComponent(conta)+'/';sec.querySelector('.ig-nome').textContent='Seguir @'+conta};
+  var grelha=sec.querySelector('.ig-grelha');
+  var semFeed=function(){sec.classList.add('ig-sem-feed')};
+  if(!feed||!window.fetch){semFeed();return}
+  var carrega=function(){
+    fetch(feed).then(function(r){if(!r.ok)throw r.status;return r.json()}).then(function(d){
+      var posts=(Array.isArray(d)?d:(d&&d.posts)||[]).slice(0,6);
+      if(!posts.length)return semFeed();
+      grelha.innerHTML='';
+      posts.forEach(function(p){
+        var tam=p.sizes&&(p.sizes.medium||p.sizes.small||p.sizes.large);
+        var src=(tam&&tam.mediaUrl)||(p.mediaType==='VIDEO'?p.thumbnailUrl:p.mediaUrl)||p.thumbnailUrl;
+        if(!src)return;
+        var legenda=(p.prunedCaption||p.caption||'').replace(/\s+/g,' ').trim();
+        var li=document.createElement('li'), a=document.createElement('a'), img=document.createElement('img');
+        a.href=p.permalink||seguir.href; a.target='_blank'; a.rel='noopener';
+        a.setAttribute('aria-label','Ver no Instagram'+(legenda?': '+legenda.slice(0,90):''));
+        img.src=src; img.alt=legenda?legenda.slice(0,120):'Publicação da Marketolder no Instagram';
+        img.loading='lazy'; img.decoding='async'; img.width=(tam&&tam.width)||600; img.height=(tam&&tam.height)||600;
+        a.appendChild(img);
+        if(p.mediaType==='VIDEO'){var v=document.createElement('span');v.className='ig-video';v.setAttribute('aria-hidden','true');a.appendChild(v)}
+        li.appendChild(a); grelha.appendChild(li);
+      });
+      if(!grelha.children.length)semFeed();
+    }).catch(semFeed);
+  };
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();carrega()}},{rootMargin:'600px 0px'});
+    io.observe(sec);
+  } else carrega();
+})();
