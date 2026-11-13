@@ -66,7 +66,7 @@ servicos=f'''<section aria-labelledby="t-planos">
 </section>
 '''
 pagina('servicos.html','Serviços e preços · Marketolder',
-  'Arranque por 100 €, mensalidades desde 75 €/mês e extras à medida: ficha Google, redes sociais, identidade visual, sites e lojas online para pequenos negócios em Braga.',
+  'Arranque por 150 €, mensalidades desde 100 €/mês e extras à medida: ficha Google, redes sociais, identidade visual, sites e lojas online para pequenos negócios em Braga.',
   'servicos.html','servicos','Serviços','Comece simples. <em>Cresça quando quiser.</em>',
   'Um arranque único para pôr tudo de pé. Depois, se quiser, um acompanhamento mensal ao ritmo do seu negócio. Preços claros, sem letras pequenas.',servicos)
 
@@ -120,7 +120,7 @@ abordagem=f'''<section aria-labelledby="t-manif">
         <div><h3>Conversa e diagnóstico</h3><p>Conhecemos o seu negócio e fazemos um diagnóstico do que já existe online: o que funciona e o que falta.</p></div>
         <ul class="lista plano-lista"><li>Google, redes sociais e site, se existir</li><li>Resposta em 24 horas</li><li>Sem compromisso</li></ul></li>
       <li class="rv"><span class="num" aria-hidden="true">II</span>
-        <div><h3>Arranque</h3><p>Pomos tudo de pé, com a sua identidade. Pagamento único de 100 €.</p></div>
+        <div><h3>Arranque</h3><p>Pomos tudo de pé, com a sua identidade. Pagamento único de 150 €.</p></div>
         <ul class="lista plano-lista"><li>Ficha Google criada e otimizada</li><li>Criação de redes sociais: Instagram, Facebook e TikTok</li><li>Logótipo e animação do logótipo</li><li>Guia de identidade visual</li><li>Primeira publicação</li></ul></li>
       <li class="rv"><span class="num" aria-hidden="true">III</span>
         <div><h3>Acompanhamento</h3><p>Se quiser, continuamos todos os meses, no plano que fizer sentido: Presença, Presença+ ou Crescimento.</p></div>

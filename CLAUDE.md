@@ -48,12 +48,12 @@ Donos de pequenos negócios locais (cafés, restaurantes, cabeleireiros, oficina
 O fundador é licenciado em Marketing, recebeu **prémios de mérito como melhor aluno do curso** e tem **mais de 200 horas de formação em marketing digital**. Usar numa secção "Sobre" curta, sem nome nem fotografia. (Indicação do dono: não falar em "duas bolsas de excelência".)
 
 ## Preços (definidos pelo dono, usar exatamente estes)
-**Arranque, pagamento único, 100 €:** ficha Google criada e otimizada, criação de redes sociais (Instagram, Facebook e TikTok), logótipo, animação do logótipo, guia de identidade visual, primeira publicação.
+**Arranque, pagamento único, 150 €:** ficha Google criada e otimizada, criação de redes sociais (Instagram, Facebook e TikTok), logótipo, animação do logótipo, guia de identidade visual, primeira publicação.
 
 **Mensalidades**
-- **Presença, 75 €/mês:** 1 publicação por semana, design com a marca do cliente, agendamento nas redes.
-- **Presença+, 90 €/mês (o pacote a destacar):** 1 publicação por semana, gestão da ficha Google (fotos, horários, novidades), resposta a avaliações, relatório mensal simples.
-- **Crescimento, 150 €/mês:** 2 publicações por semana com vídeo, tudo do Presença+, e-mail marketing mensal, gestão de anúncios Meta e Google (o orçamento dos anúncios é pago pelo cliente diretamente às plataformas).
+- **Presença, 100 €/mês:** 1 publicação por semana, design com a marca do cliente, agendamento nas redes.
+- **Presença+, 150 €/mês (o pacote a destacar):** 1 publicação por semana, gestão da ficha Google (fotos, horários, novidades), resposta a avaliações, relatório mensal simples.
+- **Crescimento, 250 €/mês:** 2 publicações por semana com vídeo, tudo do Presença+, e-mail marketing mensal, gestão de anúncios Meta e Google (o orçamento dos anúncios é pago pelo cliente diretamente às plataformas).
 
 **Extras, à medida**
 - Site de uma página: 250 €
@@ -71,7 +71,7 @@ Domínio e alojamento, quando necessários, ficam em nome e a cargo do cliente. 
 O site tem várias páginas (decisão do dono): `index.html` (página inicial, com todas as secções abaixo em versão resumida e ligações "Saber mais"), `abordagem.html`, `servicos.html`, `sobre.html` e `pedido.html` (contacto: formulário). Os separadores por baixo do topo são o menu do site, iguais em todas as páginas. Estilos e código partilhados em `assets/estilo.css` e `assets/site.js`; `tools/paginas.py` gera as páginas interiores.
 
 ### Secções da página inicial
-1. **Topo:** símbolo animado + "O seu negócio, encontrado." + subtítulo + botões "Começar por 100 €" e "Ver serviços".
+1. **Topo:** símbolo animado + "O seu negócio, encontrado." + subtítulo + botões "Começar por 150 €" e "Ver serviços".
 2. **O problema:** "Se não está no Google, não existe." Mapa e confiança: fotos, horário, avaliações.
 2b. **Autenticidade:** "Não há duas marcas iguais." ADN de cada negócio, três princípios (identidade antes de tendências, feito à medida, ligação verdadeira), cinco leques diferentes com o feixe camel sempre ao centro.
 3. **Serviços:** Arranque + 3 mensalidades (Presença+ destacado) + extras.
