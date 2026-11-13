@@ -53,7 +53,7 @@ O fundador é licenciado em Marketing, recebeu **prémios de mérito como melhor
 **Mensalidades**
 - **Presença, 100 €/mês:** 1 publicação por semana, design com a marca do cliente, agendamento nas redes.
 - **Presença+, 150 €/mês (o pacote a destacar):** 1 publicação por semana, gestão da ficha Google (fotos, horários, novidades), resposta a avaliações, relatório mensal simples.
-- **Crescimento, 250 €/mês:** 2 publicações por semana com vídeo, tudo do Presença+, e-mail marketing mensal, gestão de anúncios Meta e Google (o orçamento dos anúncios é pago pelo cliente diretamente às plataformas).
+- **Crescimento, 250 €/mês:** 2 publicações por semana com vídeo, tudo do Presença+, e-mail marketing mensal, gestão de anúncios Meta e Google, agendamento online incluído (o orçamento dos anúncios é pago pelo cliente diretamente às plataformas).
 
 **Extras, à medida**
 - Site de uma página: 250 €
@@ -64,8 +64,8 @@ O fundador é licenciado em Marketing, recebeu **prémios de mérito como melhor
 - Menu digital com QR: 25 €
 - WhatsApp Business configurado: 30 €
 - Newsletter mensal: 20 €/mês
+- Agendamento online: 50 € (configuração) + 20 €/mês; incluído no Crescimento (decisão do dono, 13 nov 2026; ferramenta própria a construir quando houver o primeiro pedido)
 
-**Extra planeado, ainda NÃO publicar no site** (decisão do dono, 13 nov 2026): **Agendamento online** (ferramenta própria da Marketolder, com a marca do cliente, integrada no site, na ficha Google e no Instagram): configuração 50 € + 20 €/mês; incluído no plano Crescimento. Só entra no site quando a ferramenta estiver construída e testada.
 
 Domínio e alojamento, quando necessários, ficam em nome e a cargo do cliente. **IVA:** decisão do dono (7 nov 2026): manter os preços como estão, sem referência ao IVA.
 
