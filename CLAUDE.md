@@ -65,6 +65,8 @@ O fundador é licenciado em Marketing, recebeu **prémios de mérito como melhor
 - WhatsApp Business configurado: 30 €
 - Newsletter mensal: 20 €/mês
 
+**Extra planeado, ainda NÃO publicar no site** (decisão do dono, 13 nov 2026): **Agendamento online** (ferramenta própria da Marketolder, com a marca do cliente, integrada no site, na ficha Google e no Instagram): configuração 50 € + 20 €/mês; incluído no plano Crescimento. Só entra no site quando a ferramenta estiver construída e testada.
+
 Domínio e alojamento, quando necessários, ficam em nome e a cargo do cliente. **IVA:** decisão do dono (7 nov 2026): manter os preços como estão, sem referência ao IVA.
 
 ## Estrutura
