@@ -48,7 +48,7 @@ Donos de pequenos negócios locais (cafés, restaurantes, cabeleireiros, oficina
 O fundador é licenciado em Marketing, recebeu **prémios de mérito como melhor aluno do curso** e tem **mais de 200 horas de formação em marketing digital**. Usar numa secção "Sobre" curta, sem nome nem fotografia. (Indicação do dono: não falar em "duas bolsas de excelência".)
 
 ## Preços (definidos pelo dono, usar exatamente estes)
-**Arranque, pagamento único, 150 €:** ficha Google criada e otimizada, criação de redes sociais (Instagram, Facebook e TikTok), logótipo, animação do logótipo, guia de identidade visual, primeira publicação.
+**Arranque, pagamento único, 150 €:** ficha Google criada e otimizada, criação de redes sociais (Instagram, Facebook e TikTok), logótipo, animação do logótipo, guia de identidade visual, registo do domínio em nome do cliente se aplicável (só o custo anual do domínio fica a cargo do cliente), primeira publicação.
 
 **Mensalidades**
 - **Presença, 100 €/mês:** 1 publicação por semana, design com a marca do cliente, agendamento nas redes.
@@ -67,7 +67,7 @@ O fundador é licenciado em Marketing, recebeu **prémios de mérito como melhor
 - Agendamento online: 50 € (configuração) + 20 €/mês; incluído no Crescimento (decisão do dono, 13 nov 2026; ferramenta própria a construir quando houver o primeiro pedido)
 
 
-Domínio e alojamento, quando necessários, ficam em nome e a cargo do cliente. **IVA:** decisão do dono (7 nov 2026): manter os preços como estão, sem referência ao IVA.
+Domínio e alojamento, quando necessários, ficam em nome e a cargo do cliente; o registo do domínio é feito por nós no Arranque (decisão do dono, 14 nov 2026). **IVA:** decisão do dono (7 nov 2026): manter os preços como estão, sem referência ao IVA.
 
 ## Estrutura
 O site tem várias páginas (decisão do dono): `index.html` (página inicial, com todas as secções abaixo em versão resumida e ligações "Saber mais"), `abordagem.html`, `servicos.html`, `sobre.html` e `pedido.html` (contacto: formulário). Os separadores por baixo do topo são o menu do site, iguais em todas as páginas. Estilos e código partilhados em `assets/estilo.css` e `assets/site.js`; `tools/paginas.py` gera as páginas interiores.

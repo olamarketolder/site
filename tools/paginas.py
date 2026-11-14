@@ -59,7 +59,7 @@ servicos=f'''<section aria-labelledby="t-planos">
     <div class="faq rv">
       <details><summary>Fico preso a um contrato?</summary><p>Não. Pode parar o acompanhamento mensal quando quiser.</p></details>
       <details><summary>Quem paga os anúncios?</summary><p>No plano Crescimento, nós gerimos os anúncios no Meta e no Google. O orçamento dos anúncios é pago por si, diretamente às plataformas.</p></details>
-      <details><summary>O domínio e o alojamento do site ficam em nome de quem?</summary><p>Em seu nome e a seu cargo, quando forem necessários. O site é sempre seu.</p></details>
+      <details><summary>O domínio e o alojamento do site ficam em nome de quem?</summary><p>Sempre em seu nome. Se ainda não tiver domínio, tratamos do registo no Arranque, sem custo de serviço; só paga o valor anual do domínio (e do alojamento, se tiver site). O site e o domínio são sempre seus.</p></details>
       <details><summary>Não sei que plano escolher. E agora?</summary><p>Peça uma proposta e escolha “Ainda não sei”. Vemos o que já existe online e sugerimos o que faz sentido para o seu negócio, sem compromisso.</p></details>
     </div>
   </div>
