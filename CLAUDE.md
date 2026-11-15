@@ -7,7 +7,7 @@ Este repositório é o site da **Marketolder**, uma marca de serviços de market
 - **Sem imagens geradas por IA** e sem nada que possa receber etiqueta de IA. Usar só tipografia, formas desenhadas em código (SVG/CSS) ou fotografias reais fornecidas pelo dono.
 - **Sem números, estatísticas ou testemunhos inventados.** Se faltar um dado real, deixar um marcador `<!-- TODO: número real -->` e avisar.
 - **Não ativar o GitHub Pages nem ligar o domínio** sem aprovação explícita do dono. Trabalhar, fazer commits e mostrar pré-visualizações; publicar só depois de "aprovado".
-- A marca é **"só empresa"**: sem fotografia nem nome do fundador em destaque.
+- **Fundador com cara (decisão do dono, 15 nov 2026):** o dono passou a querer dar a cara. A página Sobre tem a secção "Quem está por trás", com retrato real (`assets/fundador.jpg`/`.webp`) e o nome Luís Torres. Só fotografias reais dele, nunca geradas por IA, e nunca a simular reuniões que não aconteceram. Substitui a regra anterior "só empresa".
 
 ## Marca
 - **Nome:** Marketolder (escreve-se assim, sem H). No logótipo, em maiúsculas espaçadas: MARKETOLDER.
@@ -45,7 +45,7 @@ Fala como um bom alfaiate: sabe muito, explica pouco e com precisão. Diretos, c
 Donos de pequenos negócios locais (cafés, restaurantes, cabeleireiros, oficinas, clínicas, lojas), sobretudo na zona de Braga, com presença digital fraca ou inexistente. Visitam o site no **telemóvel**. Não são técnicos: tudo tem de ser claro em segundos.
 
 ## Argumento de credibilidade
-O fundador é licenciado em Marketing, recebeu **prémios de mérito como melhor aluno do curso** e tem **mais de 200 horas de formação em marketing digital**. Usar numa secção "Sobre" curta, sem nome nem fotografia. (Indicação do dono: não falar em "duas bolsas de excelência".)
+O fundador é licenciado em Marketing, recebeu **prémios de mérito como melhor aluno do curso** e tem **mais de 200 horas de formação em marketing digital**. Usar na secção "Sobre" (desde 15 nov 2026 com nome e retrato real do fundador). (Indicação do dono: não falar em "duas bolsas de excelência".)
 
 ## Preços (definidos pelo dono, usar exatamente estes)
 **Arranque, pagamento único, 150 €:** ficha Google criada e otimizada, criação de redes sociais (Instagram, Facebook e TikTok), logótipo, animação do logótipo, guia de identidade visual, registo do domínio em nome do cliente se aplicável (só o custo anual do domínio fica a cargo do cliente), primeira publicação.

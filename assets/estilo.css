@@ -427,3 +427,17 @@ footer a:hover{color:var(--marfim)}
 .canal-num{margin-top:18px;display:flex;justify-content:center;align-items:center;gap:14px;font-family:var(--serif);font-size:26px;color:var(--marfim);font-variant-numeric:lining-nums;letter-spacing:.02em}
 .canal-num .copiar{font:500 12px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--camel-claro);background:none;border:1px solid var(--camel);padding:7px 12px;cursor:pointer;transition:background .2s,color .2s}
 .canal-num .copiar:hover{background:var(--camel);color:var(--verde)}
+
+/* Fundador (página Sobre): retrato real + texto */
+.fundador .w{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(40px,7vw,110px);align-items:center}
+.retrato{position:relative;max-width:420px;width:100%}
+.retrato::before{content:"";position:absolute;inset:0;border:1px solid var(--camel);transform:translate(14px,14px);pointer-events:none}
+.retrato img{position:relative;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;background:#E4DED0}
+.fundador-txt h2{margin:22px 0 28px;font-size:clamp(34px,4.4vw,58px)}
+.assina{margin-top:34px;padding-top:22px;border-top:1px solid var(--fio);display:flex;align-items:baseline;gap:16px;max-width:40em}
+.assina .nome{font-family:var(--serif);font-style:italic;font-weight:500;font-size:30px;color:var(--verde);line-height:1}
+.assina .cargo{font-size:12px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--camel-txt)}
+@media (max-width:900px){
+  .fundador .w{grid-template-columns:1fr;gap:44px}
+  .retrato{max-width:340px;margin-right:14px}
+}
