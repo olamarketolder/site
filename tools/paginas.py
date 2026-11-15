@@ -162,10 +162,10 @@ sobre=f'''<section aria-labelledby="t-quem">
     </figure>
     <div class="fundador-txt rv">
       <p class="rot">Quem está por trás</p>
-      <h2 id="t-fundador">Um nome e uma cara, <em>não um departamento.</em></h2>
+      <h2 id="t-fundador">Uma cara conhecida, <em>uma equipa à medida.</em></h2>
       <div class="texto">
-        <p>A Marketolder é conduzida por Luís Torres, licenciado em Marketing, em Braga. É com ele que fala, da primeira conversa ao relatório de cada mês.</p>
-        <p>Sem intermediários nem centrais de atendimento: quem estuda o seu negócio é quem lhe responde.</p>
+        <p>A Marketolder é conduzida por Luís Torres, licenciado em Marketing, em Braga. É o seu ponto de contacto, da primeira conversa ao relatório de cada mês.</p>
+        <p>Quando o trabalho o pede, juntam-se profissionais de confiança, como fotógrafos. Cada negócio tem a equipa de que precisa, nem mais nem menos.</p>
       </div>
       <p class="assina"><span class="nome">Luís Torres</span><span class="cargo">Fundador</span></p>
     </div>
